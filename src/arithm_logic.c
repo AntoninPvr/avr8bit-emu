@@ -1,4 +1,4 @@
-#include "airthm_logic.h"
+#include "arithm_logic.h"
 
 int add(int8_t Rd, int8_t Rr, struct CPU *cpu) {
     // Add without carry
