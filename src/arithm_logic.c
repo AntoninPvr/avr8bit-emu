@@ -1,247 +1,221 @@
 #include "arithm_logic.h"
 
-void add(int8_t Rd, int8_t Rr, struct CORE *core) {
-    // Add without carry
-    // Rd <- Rd + Rr
+void add(uint8_t d, int8_t r, struct CORE *core) {
+    // Add without cary
+    // r <- r + r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] + core->R[Rr];
-    return 0;
+    core->R[d] = core->R[d] + core->R[r];
     inc_pc(core);
 }
 
-void adc(int8_t Rd, int8_t Rr, struct CORE *core) {
-    // Add with carry
-    // Rd <- Rd + Rr + C
+void adc(uint8_t d, int8_t r, struct CORE *core) {
+    // Add with cary
+    // r <- r + r + C
     // 1 cycle
-    core->R[Rd] = core->R[Rd] + core->R[Rr] + core->sreg.C;
-    return 0;
+    core->R[d] = core->R[d] + core->R[r] + core->sreg.C;
     inc_pc(core);
 }
 
-void sub(int8_t Rd, int8_t Rr, struct CORE *core) {
-    // Subtract without carry
-    // Rd <- Rd - Rr
+void sub(uint8_t d, int8_t r, struct CORE *core) {
+    // Subtract without cary
+    // r <- r - r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] - core->R[Rr];
-    return 0;
+    core->R[d] = core->R[d] - core->R[r];
     inc_pc(core);
 } 
 
-void subi(int8_t Rd, int8_t K, struct CORE *core) {
+void subi(uint8_t d, int8_t K, struct CORE *core) {
     // Subtract immediate
-    // Rd <- Rd - K
+    // r <- r - K
     // 1 cycle
-    core->R[Rd] = core->R[Rd] - K;
-    return 0;
+    core->R[d] = core->R[d] - K;
     inc_pc(core);
 }
 
-void sbc(int8_t Rd, int8_t Rr, struct CORE *core) {
-    // Subtract with carry
-    // Rd <- Rd - Rr - C
+void sbc(uint8_t d, int8_t r, struct CORE *core) {
+    // Subtract with cary
+    // r <- r - r - C
     // 1 cycle
-    core->R[Rd] = core->R[Rd] - core->R[Rr] - core->sreg.C;
-    return 0;
+    core->R[d] = core->R[d] - core->R[r] - core->sreg.C;
     inc_pc(core);
 }
 
-void sbci(int8_t Rd, int8_t K, struct CORE *core) {
-    // Subtract immediate with carry
-    // Rd <- Rd - K - C
+void sbci(uint8_t d, int8_t K, struct CORE *core) {
+    // Subtract immediate with cary
+    // r <- r - K - C
     // 1 cycle
-    core->R[Rd] = core->R[Rd] - K - core->sreg.C;
-    return 0;
+    core->R[d] = core->R[d] - K - core->sreg.C;
     inc_pc(core);
 }
 
-void and(int8_t Rd, int8_t Rr, struct CORE *core) {
+void and(uint8_t d, int8_t r, struct CORE *core) {
     // Logical AND
-    // Rd <- Rd & Rr
+    // r <- r & r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] & core->R[Rr];
-    return 0;
+    core->R[d] = core->R[d] & core->R[r];
     inc_pc(core);
 }
 
-void andi(int8_t Rd, int8_t K, struct CORE *core) {
+void andi(uint8_t d, int8_t K, struct CORE *core) {
     // Logical AND with immediate
-    // Rd <- Rd & K
+    // r <- r & K
     // 1 cycle
-    core->R[Rd] = core->R[Rd] & K;
-    return 0;
+    core->R[d] = core->R[d] & K;
     inc_pc(core);
 }
 
-void or(int8_t Rd, int8_t Rr, struct CORE *core) {
+void or(uint8_t d, int8_t r, struct CORE *core) {
     // Logical OR
-    // Rd <- Rd | Rr
+    // r <- r | r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] | core->R[Rr];
-    return 0;
+    core->R[d] = core->R[d] | core->R[r];
     inc_pc(core);
 }
 
-void ori(int8_t Rd, int8_t K, struct CORE *core) {
+void ori(uint8_t d, int8_t K, struct CORE *core) {
     // Logical OR with immediate
-    // Rd <- Rd | K
+    // r <- r | K
     // 1 cycle
-    core->R[Rd] = core->R[Rd] | K;
-    return 0;
+    core->R[d] = core->R[d] | K;
     inc_pc(core);
 }
 
-void eor(int8_t Rd, int8_t Rr, struct CORE *core) {
+void eor(uint8_t d, int8_t r, struct CORE *core) {
     // Logical Exclusive OR
-    // Rd <- Rd ^ Rr
+    // r <- r ^ r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] ^ core->R[Rr];
-    return 0;
+    core->R[d] = core->R[d] ^ core->R[r];
     inc_pc(core);
 }
 
-void com(int8_t Rd, struct CORE *core) {
+void com(uint8_t d, struct CORE *core) {
     // Logical Complement
-    // Rd <- $FF - Rd
+    // r <- $FF - r
     // 1 cycle
-    core->R[Rd] = ~core->R[Rd];
-    return 0;
+    core->R[d] = ~core->R[d];
     inc_pc(core);
 }
 
-void neg(int8_t Rd, struct CORE *core) {
+void neg(uint8_t d, struct CORE *core) {
     // Two's Complement
-    // Rd <- $00 - Rd
+    // r <- $00 - r
     // 1 cycle
-    core->R[Rd] = -core->R[Rd];
-    return 0;
+    core->R[d] = -core->R[d];
     inc_pc(core);
 }
 
-void sbr(int8_t Rd, int8_t K, struct CORE *core) {
+void sbr(uint8_t d, int8_t K, struct CORE *core) {
     // Set Bit in Register
-    // Rd <- Rd | K
+    // r <- r | K
     // 1 cycle
-    core->R[Rd] = core->R[Rd] | K;
-    return 0;
+    core->R[d] = core->R[d] | K;
     inc_pc(core);
 }
 
-void cbr(int8_t Rd, int8_t K, struct CORE *core) {
+void cbr(uint8_t d, int8_t K, struct CORE *core) {
     // Clear Bit in Register
-    // Rd <- Rd & ($FF - K)
+    // r <- r & ($FF - K)
     // 1 cycle
-    core->R[Rd] = core->R[Rd] & ~K;
-    return 0;
+    core->R[d] = core->R[d] & ~K;
     inc_pc(core);
 }
 
-void inc(int8_t Rd, struct CORE *core) {
+void inc(uint8_t d, struct CORE *core) {
     // Increment
-    // Rd <- Rd + 1
+    // r <- r + 1
     // 1 cycle
-    core->R[Rd] = core->R[Rd] + 1;
-    return 0;
+    core->R[d] = core->R[d] + 1;
     inc_pc(core);
 }
 
-void dec(int8_t Rd, struct CORE *core) {
+void dec(uint8_t d, struct CORE *core) {
     // Decrement
-    // Rd <- Rd - 1
+    // r <- r - 1
     // 1 cycle
-    core->R[Rd] = core->R[Rd] - 1;
-    return 0;
+    core->R[d] = core->R[d] - 1;
     inc_pc(core);
 }
 
-void tst(int8_t Rd, struct CORE *core) {
+void tst(uint8_t d, struct CORE *core) {
     // Test for Zero or Minus
-    // Rd <- Rd & Rd
+    // r <- r & r
     // 1 cycle
-    core->R[Rd] = core->R[Rd] & core->R[Rd];
-    return 0;
+    core->R[d] = core->R[d] & core->R[d];
     inc_pc(core);
 }
 
-void clr(int8_t Rd, struct CORE *core) {
+void clr(uint8_t d, struct CORE *core) {
     // Clear Register
-    // Rd <- 0
+    // r <- 0
     // 1 cycle
-    core->R[Rd] = 0;
-    return 0;
+    core->R[d] = 0;
     inc_pc(core);
 }
 
-void ser(int8_t Rd, struct CORE *core) {
+void ser(uint8_t d, struct CORE *core) {
     // Set Register
-    // Rd <- $FF
+    // r <- $FF
     // 1 cycle
-    core->R[Rd] = 0xFF;
-    return 0;
+    core->R[d] = 0xFF;
     inc_pc(core);
 }
 
-void mul(int8_t Rd, int8_t Rr, struct CORE *core) {
+void mul(uint8_t d, int8_t r, struct CORE *core) {
     // Multiply Unsigned
-    // R1:R0 <- Rd * Rr (UU)
+    // R1:R0 <- r * r (UU)
     // 2 cycle
-    uint16_t result = (uint16_t)core->R[Rd] * (uint16_t)core->R[Rr];
+    uint16_t result = (uint16_t)core->R[d] * (uint16_t)core->R[r];
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }
 
-void muls(int8_t Rd, int8_t Rr, struct CORE *core) {
+void muls(uint8_t d, int8_t r, struct CORE *core) {
     // Multiply Signed
-    // R1:R0 <- Rd * Rr (SS)
+    // R1:R0 <- r * r (SS)
     // 2 cycle
-    int16_t result = (int16_t)core->R[Rd] * (int16_t)core->R[Rr];
+    int16_t result = (int16_t)core->R[d] * (int16_t)core->R[r];
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }
 
-void mulsu(int8_t Rd, int8_t Rr, struct CORE *core) {
+void mulsu(uint8_t d, int8_t r, struct CORE *core) {
     // Multiply Signed with Unsigned
-    // R1:R0 <- Rd * Rr (SU)
+    // R1:R0 <- r * r (SU)
     // 2 cycle
-    int16_t result = (int16_t)core->R[Rd] * (uint16_t)core->R[Rr];
+    int16_t result = (int16_t)core->R[d] * (uint16_t)core->R[r];
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }
 
-void fmul(int8_t Rd, int8_t Rr, struct CORE *core) {
+void fmul(uint8_t d, int8_t r, struct CORE *core) {
     // Fractional Multiply Unsigned
-    // R1:R0 <- Rd * Rr (UU)
+    // R1:R0 <- r * r (UU)
     // 2 cycle
-    uint16_t result = (uint16_t)core->R[Rd] * (uint16_t)(core->R[Rr] << 1);
+    uint16_t result = (uint16_t)core->R[d] * (uint16_t)(core->R[r] << 1);
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }
 
-void fmuls(int8_t Rd, int8_t Rr, struct CORE *core) {
+void fmuls(uint8_t d, int8_t r, struct CORE *core) {
     // Fractional Multiply Signed
-    // R1:R0 <- Rd * Rr (SS)
+    // R1:R0 <- r * r (SS)
     // 2 cycle
-    int16_t result = (int16_t)core->R[Rd] * (int16_t)(core->R[Rr] << 1);
+    int16_t result = (int16_t)core->R[d] * (int16_t)(core->R[r] << 1);
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }
 
-void fmulsu(int8_t Rd, int8_t Rr, struct CORE *core) {
+void fmulsu(uint8_t d, int8_t r, struct CORE *core) {
     // Fractional Multiply Signed with Unsigned
-    // R1:R0 <- Rd * Rr (SU)
+    // R1:R0 <- r * r (SU)
     // 2 cycle
-    int16_t result = (int16_t)core->R[Rd] * (uint16_t)(core->R[Rr] << 1);
+    int16_t result = (int16_t)core->R[d] * (uint16_t)(core->R[r] << 1);
     core->R[0] = result & 0xFF;
     core->R[1] = (result >> 8) & 0xFF;
-    return 0;
     inc_pc(core);
 }

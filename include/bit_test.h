@@ -4,16 +4,16 @@
 
 #include "core.h"
 
-void lsl(int8_t Rd, struct CORE *core);
-void lsr(int8_t Rd, struct CORE *core);
-void rol(int8_t Rd, struct CORE *core);
-void ror(int8_t Rd, struct CORE *core);
-void asr(int8_t Rd, struct CORE *core);
-void swap(int8_t Rd, struct CORE *core);
+void lsl(int8_t d, struct CORE *core);
+void lsr(int8_t d, struct CORE *core);
+void rol(int8_t d, struct CORE *core);
+void ror(int8_t d, struct CORE *core);
+void asr(int8_t d, struct CORE *core);
+void swap(int8_t d, struct CORE *core);
 void sbi(int8_t IO, int8_t n, struct CORE *core);
 void cbi(int8_t IO, int8_t n, struct CORE *core);
-void bst(int8_t Rd, int8_t b, struct CORE *core);
-void bld(int8_t Rd, int8_t b, struct CORE *core);
+void bst(int8_t d, int8_t b, struct CORE *core);
+void bld(int8_t d, int8_t b, struct CORE *core);
 void bset(int8_t s, struct CORE *core);
 void bclr(int8_t s, struct CORE *core);
 void sec(struct CORE *core);

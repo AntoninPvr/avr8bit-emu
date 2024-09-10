@@ -5,14 +5,14 @@
 union SREG{
     uint8_t sreg;
     struct {
-        bool C: 1; // Carry flag
+        bool C: 1; // Cary flag
         bool Z: 1; // Zero flag
         bool N: 1; // Negative flag
         bool V: 1; // Two's complement overflow flag
         bool S: 1; // Sign bit, S = N ^ V
-        bool H: 1; // Half carry flag
+        bool H: 1; // Half cary flag
         bool T: 1; // Transfer bit used by BLD and BST instructions
-        bool I: 1; // Global voiderrupt enable/disable flag
+        bool I: 1; // Global voiderupt enable/disable flag
     };
 };
 

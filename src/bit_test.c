@@ -1,62 +1,62 @@
 #include "bit_test.h"
 
-void lsl(int8_t Rd, struct CORE *core) {
+void lsl(uint8_t d, struct CORE *core) {
     // Logical Shift Left
-    // Rd(7) loaded into C
-    // Rd <- Rd << 1
+    // r(7) loaded into C
+    // r <- r << 1
     // 1 cycle
-    core->sreg.C = (core->R[Rd] & 0x80) >> 7;
-    core->R[Rd] = core->R[Rd] << 1;
+    core->sreg.C = (core->R[d] & 0x80) >> 7;
+    core->R[d] = core->R[d] << 1;
     inc_pc(core);
 }
 
-void lsr(int8_t Rd, struct CORE *core) {
+void lsr(uint8_t d, struct CORE *core) {
     // Logical Shift Right
-    // Rd(0) loaded into C
-    // Rd <- Rd >> 1
+    // r(0) loaded into C
+    // r <- r >> 1
     // 1 cycle
-    core->sreg.C = core->R[Rd] & 0x01;
-    core->R[Rd] = core->R[Rd] >> 1;
+    core->sreg.C = core->R[d] & 0x01;
+    core->R[d] = core->R[d] >> 1;
     inc_pc(core);
 }
 
-void rol(int8_t Rd, struct CORE *core) {
-    // Rotate Left through Carry
-    // Rd(7) loaded into C
-    // Rd <- Rd << 1 | C
-    // 1 cycle
-    bool temp = core->sreg.C;
-    core->sreg.C = (core->R[Rd] & 0x80) >> 7;
-    core->R[Rd] = (core->R[Rd] << 1) | temp;
-    inc_pc(core);
-}
-
-void ror(int8_t Rd, struct CORE *core) {
-    // Rotate Right through Carry
-    // Rd(0) loaded into C
-    // Rd <- Rd >> 1 | C << 7
+void rol(uint8_t d, struct CORE *core) {
+    // Rotate Left through Cary
+    // r(7) loaded into C
+    // r <- r << 1 | C
     // 1 cycle
     bool temp = core->sreg.C;
-    core->sreg.C = core->R[Rd] & 0x01;
-    core->R[Rd] = (core->R[Rd] >> 1) | (temp << 7);
+    core->sreg.C = (core->R[d] & 0x80) >> 7;
+    core->R[d] = (core->R[d] << 1) | temp;
     inc_pc(core);
 }
 
-void asr(int8_t Rd, struct CORE *core) {
+void ror(uint8_t d, struct CORE *core) {
+    // Rotate Right through Cary
+    // r(0) loaded into C
+    // r <- r >> 1 | C << 7
+    // 1 cycle
+    bool temp = core->sreg.C;
+    core->sreg.C = core->R[d] & 0x01;
+    core->R[d] = (core->R[d] >> 1) | (temp << 7);
+    inc_pc(core);
+}
+
+void asr(uint8_t d, struct CORE *core) {
     // Arithmetic Shift Right
-    // Rd(0) loaded into C
-    // Rd <- Rd >> 1
+    // r(0) loaded into C
+    // r <- r >> 1
     // 1 cycle
-    core->sreg.C = core->R[Rd] & 0x01;
-    core->R[Rd] = (core->R[Rd] & 0x80) | (core->R[Rd] >> 1);
+    core->sreg.C = core->R[d] & 0x01;
+    core->R[d] = (core->R[d] & 0x80) | (core->R[d] >> 1);
     inc_pc(core);
 }
 
-void swap(int8_t Rd, struct CORE *core) {
+void swap(uint8_t d, struct CORE *core) {
     // Swap Nibbles
-    // Rd <- Rd(3:0) << 4 | Rd(7:4)
+    // r <- r(3:0) << 4 | r(7:4)
     // 1 cycle
-    core->R[Rd] = (core->R[Rd] & 0x0F) << 4 | (core->R[Rd] & 0xF0) >> 4;
+    core->R[d] = (core->R[d] & 0x0F) << 4 | (core->R[d] & 0xF0) >> 4;
     inc_pc(core);
 }
 
@@ -76,19 +76,19 @@ void cbi(int8_t IO, int8_t n, struct CORE *core) {
     inc_pc(core);
 }
 
-void bst(int8_t Rd, int8_t b, struct CORE *core) {
+void bst(uint8_t d, int8_t b, struct CORE *core) {
     // Bit Store from Register to T Flag
-    // T <- Rd(b)
+    // T <- r(b)
     // 1 cycle
-    core->sreg.T = (core->R[Rd] & (1 << b)) >> b;
+    core->sreg.T = (core->R[d] & (1 << b)) >> b;
     inc_pc(core);
 }
 
-void bld(int8_t Rd, int8_t b, struct CORE *core) {
+void bld(uint8_t d, int8_t b, struct CORE *core) {
     // Bit Load from T Flag to Register
-    // Rd(b) <- T
+    // r(b) <- T
     // 1 cycle
-    core->R[Rd] = (core->R[Rd] & ~(1 << b)) | (core->sreg.T << b);
+    core->R[d] = (core->R[d] & ~(1 << b)) | (core->sreg.T << b);
     inc_pc(core);
 }
 
@@ -109,7 +109,7 @@ void bclr(int8_t s, struct CORE *core) {
 }
 
 void sec(struct CORE *core) {
-    // Set Carry Flag
+    // Set Cary Flag
     // C <- 1
     // 1 cycle
     core->sreg.C = 1;
@@ -117,7 +117,7 @@ void sec(struct CORE *core) {
 }
 
 void clc(struct CORE *core) {
-    // Clear Carry Flag
+    // Clear Cary Flag
     // C <- 0
     // 1 cycle
     core->sreg.C = 0;
@@ -157,7 +157,7 @@ void clz(struct CORE *core) {
 }
 
 void sei(struct CORE *core) {
-    // Set Global Interrupt Enable
+    // Set Global Interupt Enable
     // I <- 1
     // 1 cycle
     core->sreg.I = 1;
@@ -165,7 +165,7 @@ void sei(struct CORE *core) {
 }
 
 void cli(struct CORE *core) {
-    // Clear Global Interrupt Enable
+    // Clear Global Interupt Enable
     // I <- 0
     // 1 cycle
     core->sreg.I = 0;
@@ -221,7 +221,7 @@ void clt(struct CORE *core) {
 }
 
 void seh(struct CORE *core) {
-    // Set Half Carry Flag
+    // Set Half Cary Flag
     // H <- 1
     // 1 cycle
     core->sreg.H = 1;
@@ -229,7 +229,7 @@ void seh(struct CORE *core) {
 }
 
 void clh(struct CORE *core) {
-    // Clear Half Carry Flag
+    // Clear Half Cary Flag
     // H <- 0
     // 1 cycle
     core->sreg.H = 0;
