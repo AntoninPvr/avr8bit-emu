@@ -16,6 +16,17 @@ void adc(uint8_t d, uint8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
+void adiw(uint8_t d, uint8_t K, struct CORE *core) {
+    // Add immediate to word
+    // Rd:Rd+1 <- Rd:Rd+1 + K
+    // 2 cycle
+    uint16_t Rd = core->R[d] | (core->R[d + 1] << 8);
+    uint16_t result = Rd + K;
+    core->R[d] = result & 0xFF;
+    core->R[d + 1] = (result >> 8) & 0xFF;
+    inc_pc(core);
+}
+
 void sub(uint8_t d, uint8_t r, struct CORE *core) {
     // Subtract without cary
     // Rd <- Rd - Rr
@@ -45,6 +56,17 @@ void sbci(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd - K - C
     // 1 cycle
     core->R[d] = core->R[d] - K - core->sreg.C;
+    inc_pc(core);
+}
+
+void sbiw(uint8_t d, uint8_t K, struct CORE *core) {
+    // Subtract immediate from word
+    // Rd:Rd+1 <- Rd:Rd+1 - K
+    // 2 cycle
+    uint16_t Rd = core->R[d] | (core->R[d + 1] << 8);
+    uint16_t result = Rd - K;
+    core->R[d] = result & 0xFF;
+    core->R[d + 1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
