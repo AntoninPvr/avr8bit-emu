@@ -16,7 +16,7 @@ void ijmp(struct CORE *core) {
     return 0;
 }
 
-void jmp(int32_t k, struct CORE *core) {
+void jmp(uint32_t k, struct CORE *core) {
     // Absolute jump
     // PC <- k
     // 3 cycles

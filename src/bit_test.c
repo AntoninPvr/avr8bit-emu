@@ -3,7 +3,7 @@
 void lsl(uint8_t d, struct CORE *core) {
     // Logical Shift Left
     // r(7) loaded into C
-    // r <- r << 1
+    // Rd <- Rd << 1
     // 1 cycle
     core->sreg.C = (core->R[d] & 0x80) >> 7;
     core->R[d] = core->R[d] << 1;
@@ -13,7 +13,7 @@ void lsl(uint8_t d, struct CORE *core) {
 void lsr(uint8_t d, struct CORE *core) {
     // Logical Shift Right
     // r(0) loaded into C
-    // r <- r >> 1
+    // Rd <- Rd >> 1
     // 1 cycle
     core->sreg.C = core->R[d] & 0x01;
     core->R[d] = core->R[d] >> 1;
@@ -23,7 +23,7 @@ void lsr(uint8_t d, struct CORE *core) {
 void rol(uint8_t d, struct CORE *core) {
     // Rotate Left through Cary
     // r(7) loaded into C
-    // r <- r << 1 | C
+    // Rd <- Rd << 1 | C
     // 1 cycle
     bool temp = core->sreg.C;
     core->sreg.C = (core->R[d] & 0x80) >> 7;
@@ -34,7 +34,7 @@ void rol(uint8_t d, struct CORE *core) {
 void ror(uint8_t d, struct CORE *core) {
     // Rotate Right through Cary
     // r(0) loaded into C
-    // r <- r >> 1 | C << 7
+    // Rd <- Rd >> 1 | C << 7
     // 1 cycle
     bool temp = core->sreg.C;
     core->sreg.C = core->R[d] & 0x01;
@@ -45,7 +45,7 @@ void ror(uint8_t d, struct CORE *core) {
 void asr(uint8_t d, struct CORE *core) {
     // Arithmetic Shift Right
     // r(0) loaded into C
-    // r <- r >> 1
+    // Rd <- Rd >> 1
     // 1 cycle
     core->sreg.C = core->R[d] & 0x01;
     core->R[d] = (core->R[d] & 0x80) | (core->R[d] >> 1);
@@ -54,7 +54,7 @@ void asr(uint8_t d, struct CORE *core) {
 
 void swap(uint8_t d, struct CORE *core) {
     // Swap Nibbles
-    // r <- r(3:0) << 4 | r(7:4)
+    // Rd <- Rd(3:0) << 4 | Rd(7:4)
     // 1 cycle
     core->R[d] = (core->R[d] & 0x0F) << 4 | (core->R[d] & 0xF0) >> 4;
     inc_pc(core);
@@ -78,7 +78,7 @@ void cbi(uint8_t IO, uint8_t n, struct CORE *core) {
 
 void bst(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Store from Register to T Flag
-    // T <- r(b)
+    // T <- Rd(b)
     // 1 cycle
     core->sreg.T = (core->R[d] & (1 << b)) >> b;
     inc_pc(core);
@@ -86,7 +86,7 @@ void bst(uint8_t d, uint8_t b, struct CORE *core) {
 
 void bld(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Load from T Flag to Register
-    // r(b) <- T
+    // Rd(b) <- T
     // 1 cycle
     core->R[d] = (core->R[d] & ~(1 << b)) | (core->sreg.T << b);
     inc_pc(core);

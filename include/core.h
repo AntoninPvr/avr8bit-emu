@@ -18,8 +18,8 @@ union SREG{
 
 struct CORE {
     uint8_t R[32]; // 32 8-bit registers
-    int32_t PC;
-    int16_t SP;
+    uint32_t PC;
+    uint16_t SP;
     union SREG sreg;
 };
 
