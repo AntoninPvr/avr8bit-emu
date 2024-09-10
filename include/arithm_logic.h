@@ -2,31 +2,31 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "cpu.h"
+#include "core.h"
 
-int add(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int adc(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int sub(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int subi(int8_t Rd, int8_t K, struct CPU *cpu);
-int sbc(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int sbci(int8_t Rd, int8_t K, struct CPU *cpu);
-int and(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int andi(int8_t Rd, int8_t K, struct CPU *cpu);
-int or(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int ori(int8_t Rd, int8_t K, struct CPU *cpu);
-int eor(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int com(int8_t Rd, struct CPU *cpu);
-int neg(int8_t Rd, struct CPU *cpu);
-int sbr(int8_t Rd, int8_t K, struct CPU *cpu);
-int cbr(int8_t Rd, int8_t K, struct CPU *cpu);
-int inc(int8_t Rd, struct CPU *cpu);
-int dec(int8_t Rd, struct CPU *cpu);
-int tst(int8_t Rd, struct CPU *cpu);
-int clr(int8_t Rd, struct CPU *cpu);
-int ser(int8_t Rd, struct CPU *cpu);
-int mul(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int muls(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int mulsu(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int fmul(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int fmuls(int8_t Rd, int8_t Rr, struct CPU *cpu);
-int fmulsu(int8_t Rd, int8_t Rr, struct CPU *cpu);
+void add(int8_t Rd, int8_t Rr, struct CORE *core);
+void adc(int8_t Rd, int8_t Rr, struct CORE *core);
+void sub(int8_t Rd, int8_t Rr, struct CORE *core);
+void subi(int8_t Rd, int8_t K, struct CORE *core);
+void sbc(int8_t Rd, int8_t Rr, struct CORE *core);
+void sbci(int8_t Rd, int8_t K, struct CORE *core);
+void and(int8_t Rd, int8_t Rr, struct CORE *core);
+void andi(int8_t Rd, int8_t K, struct CORE *core);
+void or(int8_t Rd, int8_t Rr, struct CORE *core);
+void ori(int8_t Rd, int8_t K, struct CORE *core);
+void eor(int8_t Rd, int8_t Rr, struct CORE *core);
+void com(int8_t Rd, struct CORE *core);
+void neg(int8_t Rd, struct CORE *core);
+void sbr(int8_t Rd, int8_t K, struct CORE *core);
+void cbr(int8_t Rd, int8_t K, struct CORE *core);
+void inc(int8_t Rd, struct CORE *core);
+void dec(int8_t Rd, struct CORE *core);
+void tst(int8_t Rd, struct CORE *core);
+void clr(int8_t Rd, struct CORE *core);
+void ser(int8_t Rd, struct CORE *core);
+void mul(int8_t Rd, int8_t Rr, struct CORE *core);
+void muls(int8_t Rd, int8_t Rr, struct CORE *core);
+void mulsu(int8_t Rd, int8_t Rr, struct CORE *core);
+void fmul(int8_t Rd, int8_t Rr, struct CORE *core);
+void fmuls(int8_t Rd, int8_t Rr, struct CORE *core);
+void fmulsu(int8_t Rd, int8_t Rr, struct CORE *core);

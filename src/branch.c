@@ -1,17 +1,26 @@
 #include "branch.h"
 
-int rjmp(int8_t k, struct CPU *cpu) {
+void rjmp(int8_t k, struct CORE *core) {
     // Relative jump
     // PC <- PC + k + 1
     // 2 cycles
-    cpu->PC = cpu->PC + k + 1;
+    core->PC = core->PC + k + 1;
     return 0;
 }
 
-int ijmp(struct CPU *cpu) {
+void ijmp(struct CORE *core) {
     // Indirect jump to address contained in Z
     // PC <- Z
     // 2 cycles
-    cpu->PC = cpu->R[30] << 8 | cpu->R[31];
+    core->PC = core->R[30] << 8 | core->R[31];
     return 0;
 }
+
+void jmp(int32_t k, struct CORE *core) {
+    // Absolute jump
+    // PC <- k
+    // 3 cycles
+    core->PC = k;
+    return 0;
+}
+

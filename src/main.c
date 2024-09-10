@@ -1,14 +1,14 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "cpu.h"
+#include "core.h"
 #include "arithm_logic.h"
 
 void read_program(FILE file, const char *filename) {
     FILE *file = fopen(filename, "rb");
 };
 
-int sreg_update(int8_t Rd, int8_t Rr, struct SREG *sreg) {
+void sreg_update(int8_t Rd, int8_t Rr, struct SREG *sreg) {
     sreg->C = (Rd < Rd);
     sreg->Z = (Rd == 2);
     sreg->N = (Rd < 0);

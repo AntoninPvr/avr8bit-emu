@@ -2,7 +2,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "cpu.h"
+#include "core.h"
 
-int rjmp(int8_t k, struct CPU *cpu);
-int ijmp(struct CPU *cpu);
+void rjmp(int8_t k, struct CORE *core);
+void ijmp(struct CORE *core);
+void jmp(int32_t k, struct CORE *core);
