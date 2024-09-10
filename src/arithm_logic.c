@@ -1,6 +1,6 @@
 #include "arithm_logic.h"
 
-void add(uint8_t d, int8_t r, struct CORE *core) {
+void add(uint8_t d, uint8_t r, struct CORE *core) {
     // Add without cary
     // r <- r + r
     // 1 cycle
@@ -8,7 +8,7 @@ void add(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void adc(uint8_t d, int8_t r, struct CORE *core) {
+void adc(uint8_t d, uint8_t r, struct CORE *core) {
     // Add with cary
     // r <- r + r + C
     // 1 cycle
@@ -16,7 +16,7 @@ void adc(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void sub(uint8_t d, int8_t r, struct CORE *core) {
+void sub(uint8_t d, uint8_t r, struct CORE *core) {
     // Subtract without cary
     // r <- r - r
     // 1 cycle
@@ -24,7 +24,7 @@ void sub(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 } 
 
-void subi(uint8_t d, int8_t K, struct CORE *core) {
+void subi(uint8_t d, uint8_t K, struct CORE *core) {
     // Subtract immediate
     // r <- r - K
     // 1 cycle
@@ -32,7 +32,7 @@ void subi(uint8_t d, int8_t K, struct CORE *core) {
     inc_pc(core);
 }
 
-void sbc(uint8_t d, int8_t r, struct CORE *core) {
+void sbc(uint8_t d, uint8_t r, struct CORE *core) {
     // Subtract with cary
     // r <- r - r - C
     // 1 cycle
@@ -40,7 +40,7 @@ void sbc(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void sbci(uint8_t d, int8_t K, struct CORE *core) {
+void sbci(uint8_t d, uint8_t K, struct CORE *core) {
     // Subtract immediate with cary
     // r <- r - K - C
     // 1 cycle
@@ -48,7 +48,7 @@ void sbci(uint8_t d, int8_t K, struct CORE *core) {
     inc_pc(core);
 }
 
-void and(uint8_t d, int8_t r, struct CORE *core) {
+void and(uint8_t d, uint8_t r, struct CORE *core) {
     // Logical AND
     // r <- r & r
     // 1 cycle
@@ -56,7 +56,7 @@ void and(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void andi(uint8_t d, int8_t K, struct CORE *core) {
+void andi(uint8_t d, uint8_t K, struct CORE *core) {
     // Logical AND with immediate
     // r <- r & K
     // 1 cycle
@@ -64,7 +64,7 @@ void andi(uint8_t d, int8_t K, struct CORE *core) {
     inc_pc(core);
 }
 
-void or(uint8_t d, int8_t r, struct CORE *core) {
+void or(uint8_t d, uint8_t r, struct CORE *core) {
     // Logical OR
     // r <- r | r
     // 1 cycle
@@ -72,7 +72,7 @@ void or(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void ori(uint8_t d, int8_t K, struct CORE *core) {
+void ori(uint8_t d, uint8_t K, struct CORE *core) {
     // Logical OR with immediate
     // r <- r | K
     // 1 cycle
@@ -80,7 +80,7 @@ void ori(uint8_t d, int8_t K, struct CORE *core) {
     inc_pc(core);
 }
 
-void eor(uint8_t d, int8_t r, struct CORE *core) {
+void eor(uint8_t d, uint8_t r, struct CORE *core) {
     // Logical Exclusive OR
     // r <- r ^ r
     // 1 cycle
@@ -104,7 +104,7 @@ void neg(uint8_t d, struct CORE *core) {
     inc_pc(core);
 }
 
-void sbr(uint8_t d, int8_t K, struct CORE *core) {
+void sbr(uint8_t d, uint8_t K, struct CORE *core) {
     // Set Bit in Register
     // r <- r | K
     // 1 cycle
@@ -112,7 +112,7 @@ void sbr(uint8_t d, int8_t K, struct CORE *core) {
     inc_pc(core);
 }
 
-void cbr(uint8_t d, int8_t K, struct CORE *core) {
+void cbr(uint8_t d, uint8_t K, struct CORE *core) {
     // Clear Bit in Register
     // r <- r & ($FF - K)
     // 1 cycle
@@ -160,7 +160,7 @@ void ser(uint8_t d, struct CORE *core) {
     inc_pc(core);
 }
 
-void mul(uint8_t d, int8_t r, struct CORE *core) {
+void mul(uint8_t d, uint8_t r, struct CORE *core) {
     // Multiply Unsigned
     // R1:R0 <- r * r (UU)
     // 2 cycle
@@ -170,7 +170,7 @@ void mul(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void muls(uint8_t d, int8_t r, struct CORE *core) {
+void muls(uint8_t d, uint8_t r, struct CORE *core) {
     // Multiply Signed
     // R1:R0 <- r * r (SS)
     // 2 cycle
@@ -180,7 +180,7 @@ void muls(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void mulsu(uint8_t d, int8_t r, struct CORE *core) {
+void mulsu(uint8_t d, uint8_t r, struct CORE *core) {
     // Multiply Signed with Unsigned
     // R1:R0 <- r * r (SU)
     // 2 cycle
@@ -190,7 +190,7 @@ void mulsu(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void fmul(uint8_t d, int8_t r, struct CORE *core) {
+void fmul(uint8_t d, uint8_t r, struct CORE *core) {
     // Fractional Multiply Unsigned
     // R1:R0 <- r * r (UU)
     // 2 cycle
@@ -200,7 +200,7 @@ void fmul(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void fmuls(uint8_t d, int8_t r, struct CORE *core) {
+void fmuls(uint8_t d, uint8_t r, struct CORE *core) {
     // Fractional Multiply Signed
     // R1:R0 <- r * r (SS)
     // 2 cycle
@@ -210,7 +210,7 @@ void fmuls(uint8_t d, int8_t r, struct CORE *core) {
     inc_pc(core);
 }
 
-void fmulsu(uint8_t d, int8_t r, struct CORE *core) {
+void fmulsu(uint8_t d, uint8_t r, struct CORE *core) {
     // Fractional Multiply Signed with Unsigned
     // R1:R0 <- r * r (SU)
     // 2 cycle

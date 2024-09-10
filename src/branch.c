@@ -1,6 +1,6 @@
 #include "branch.h"
 
-void rjmp(int8_t k, struct CORE *core) {
+void rjmp(uint8_t k, struct CORE *core) {
     // Relative jump
     // PC <- PC + k + 1
     // 2 cycles

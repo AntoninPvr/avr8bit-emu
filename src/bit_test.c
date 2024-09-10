@@ -60,7 +60,7 @@ void swap(uint8_t d, struct CORE *core) {
     inc_pc(core);
 }
 
-void sbi(int8_t IO, int8_t n, struct CORE *core) {
+void sbi(uint8_t IO, uint8_t n, struct CORE *core) {
     // Set Bit in I/O Register
     // I/O(n) <- 1
     // 2 cycle
@@ -68,7 +68,7 @@ void sbi(int8_t IO, int8_t n, struct CORE *core) {
     inc_pc(core);
 }
 
-void cbi(int8_t IO, int8_t n, struct CORE *core) {
+void cbi(uint8_t IO, uint8_t n, struct CORE *core) {
     // Clear Bit in I/O Register
     // I/O(n) <- 0
     // 2 cycle
@@ -76,7 +76,7 @@ void cbi(int8_t IO, int8_t n, struct CORE *core) {
     inc_pc(core);
 }
 
-void bst(uint8_t d, int8_t b, struct CORE *core) {
+void bst(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Store from Register to T Flag
     // T <- r(b)
     // 1 cycle
@@ -84,7 +84,7 @@ void bst(uint8_t d, int8_t b, struct CORE *core) {
     inc_pc(core);
 }
 
-void bld(uint8_t d, int8_t b, struct CORE *core) {
+void bld(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Load from T Flag to Register
     // r(b) <- T
     // 1 cycle
@@ -92,7 +92,7 @@ void bld(uint8_t d, int8_t b, struct CORE *core) {
     inc_pc(core);
 }
 
-void bset(int8_t s, struct CORE *core) {
+void bset(uint8_t s, struct CORE *core) {
     // Bit Set in SREG
     // S <- 1
     // 1 cycle
@@ -100,7 +100,7 @@ void bset(int8_t s, struct CORE *core) {
     inc_pc(core);
 }
 
-void bclr(int8_t s, struct CORE *core) {
+void bclr(uint8_t s, struct CORE *core) {
     // Bit Clear in SREG
     // S <- 0
     // 1 cycle
