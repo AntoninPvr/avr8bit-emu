@@ -137,10 +137,7 @@ void and(uint8_t d, uint8_t r, struct CORE *core) {
     core->R[d] = core->R[d] & core->R[r];
 
     // Update SREG
-    update_sreg_V(core, false);
-    update_sreg_N(core, (core->R[d]) >> 7);
-    update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_logic(core, core->R[d]);
 
     inc_pc(core);
 }
@@ -154,6 +151,11 @@ void andi(uint8_t d, uint8_t K, struct CORE *core) {
 
 	// Execute instruction 
     core->R[d] = core->R[d] & K;
+
+    // Update SREG
+    update_sreg_logic(core, core->R[d]);
+
+    inc_pc(core);
 }
 
 void or(uint8_t d, uint8_t r, struct CORE *core) {
@@ -165,6 +167,10 @@ void or(uint8_t d, uint8_t r, struct CORE *core) {
 
 	// Execute instruction 
     core->R[d] = core->R[d] | core->R[r];
+
+    // Update SREG
+    update_sreg_logic(core, core->R[d]);
+
     inc_pc(core);
 }
 
@@ -177,6 +183,10 @@ void ori(uint8_t d, uint8_t K, struct CORE *core) {
 
 	// Execute instruction 
     core->R[d] = core->R[d] | K;
+
+    // Update SREG
+    update_sreg_logic(core, core->R[d]);
+
     inc_pc(core);
 }
 
@@ -189,6 +199,10 @@ void eor(uint8_t d, uint8_t r, struct CORE *core) {
 
 	// Execute instruction 
     core->R[d] = core->R[d] ^ core->R[r];
+
+    // Update SREG
+    update_sreg_logic(core, core->R[d]);
+    
     inc_pc(core);
 }
 
@@ -201,6 +215,11 @@ void com(uint8_t d, struct CORE *core) {
 
 	// Execute instruction 
     core->R[d] = ~core->R[d];
+
+    // Update SREG
+    update_sreg_logic(core, core->R[d]);
+    update_sreg_C(core, true);
+    
     inc_pc(core);
 }
 

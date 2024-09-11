@@ -57,6 +57,13 @@ void update_sreg_arithm(struct CORE *core, uint8_t Rd, uint8_t Rr, uint8_t resul
     core->sreg.H = sreg_H_compute(Rd, Rr);
 }
 
+void update_sreg_logic(struct CORE *core, uint8_t result) {
+    core->sreg.Z = sreg_Z_compute(result);
+    core->sreg.N = sreg_N_compute(result);
+    core->sreg.V = 0;
+    core->sreg.S = sreg_S_compute(core->sreg.N, core->sreg.V);
+}
+
 void update_sreg_C(struct CORE *core, bool state) {
     core->sreg.C = state;
 }

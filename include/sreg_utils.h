@@ -18,6 +18,7 @@ uint8_t sreg_S_compute(bool N, bool V);
 uint8_t sreg_H_compute(uint8_t Rd, uint8_t Rr);
 
 void update_sreg_arithm(struct CORE *core, uint8_t Rd, uint8_t Rr, uint8_t result);
+void update_sreg_logic(struct CORE *core, uint8_t result);
 
 void update_sreg_C(struct CORE *core, bool state);
 void update_sreg_Z(struct CORE *core, bool state);
