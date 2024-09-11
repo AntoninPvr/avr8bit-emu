@@ -2,6 +2,9 @@
 
 Simple avr emulator 
 
+**Work in progress**
+This project is still in development and not ready for use. Not all instructions are implemented yet. There are still large amounts of potentials flaws and bugs.
+
 ## Implemented
 
 Core:
@@ -10,6 +13,8 @@ Core:
 - SREG flags register
 - 16bit SP stack pointer
 - 16bit PC program counter
+
+- SRAM memory
 
 ## Arithmetic and logic instructions
 

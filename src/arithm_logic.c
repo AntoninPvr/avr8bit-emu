@@ -5,13 +5,13 @@ void add(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd + Rr
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
     // Execute instruction
-    core->R[d] = core->R[d] + core->R[r];
+    core->gp.R[d] = core->gp.R[d] + core->gp.R[r];
 
     // Update SREG
-    update_sreg_arithm(core, R_tmp, core->R[r], core->R[d]);
+    update_sreg_arithm(core, R_tmp, core->gp.R[r], core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -21,13 +21,13 @@ void adc(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd + Rr + C
     // 1 cycle
 
-    uint8_t R_tmp = core->R[d];
+    uint8_t R_tmp = core->gp.R[d];
 
     // Execute instruction
-    core->R[d] = core->R[d] + core->R[r] + core->sreg.C;
+    core->gp.R[d] = core->gp.R[d] + core->gp.R[r] + core->sreg.C;
 
     // Update SREG
-    update_sreg_arithm(core, R_tmp, core->R[r], core->R[d]);
+    update_sreg_arithm(core, R_tmp, core->gp.R[r], core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -37,13 +37,13 @@ void adiw(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd:Rd+1 <- Rd:Rd+1 + K
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    uint16_t Rd = core->R[d] | (core->R[d + 1] << 8);
+    uint16_t Rd = core->gp.R[d] | (core->gp.R[d + 1] << 8);
     uint16_t result = Rd + K;
-    core->R[d] = result & 0xFF;
-    core->R[d + 1] = (result >> 8) & 0xFF;
+    core->gp.R[d] = result & 0xFF;
+    core->gp.R[d + 1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -52,13 +52,13 @@ void sub(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd - Rr
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] - core->R[r];
+    core->gp.R[d] = core->gp.R[d] - core->gp.R[r];
     
     // Update SREG
-    update_sreg_arithm(core, R_tmp, core->R[r], core->R[d]);
+    update_sreg_arithm(core, R_tmp, core->gp.R[r], core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -68,13 +68,13 @@ void subi(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd - K
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] - K;
+    core->gp.R[d] = core->gp.R[d] - K;
 
     // Update SREG
-    update_sreg_arithm(core, R_tmp, K, core->R[d]);
+    update_sreg_arithm(core, R_tmp, K, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -84,13 +84,13 @@ void sbc(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd - Rr - C
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] - core->R[r] - core->sreg.C;
+    core->gp.R[d] = core->gp.R[d] - core->gp.R[r] - core->sreg.C;
 
     // Update SREG
-    update_sreg_arithm(core, R_tmp, core->R[r], core->R[d]);
+    update_sreg_arithm(core, R_tmp, core->gp.R[r], core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -100,13 +100,13 @@ void sbci(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd - K - C
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] - K - core->sreg.C;
+    core->gp.R[d] = core->gp.R[d] - K - core->sreg.C;
 
     // Update SREG
-    update_sreg_arithm(core, R_tmp, K, core->R[d]);
+    update_sreg_arithm(core, R_tmp, K, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -116,13 +116,13 @@ void sbiw(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd:Rd+1 <- Rd:Rd+1 - K
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    uint16_t Rd = core->R[d] | (core->R[d + 1] << 8);
+    uint16_t Rd = core->gp.R[d] | (core->gp.R[d + 1] << 8);
     uint16_t result = Rd - K;
-    core->R[d] = result & 0xFF;
-    core->R[d + 1] = (result >> 8) & 0xFF;
+    core->gp.R[d] = result & 0xFF;
+    core->gp.R[d + 1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -131,13 +131,13 @@ void and(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd & Rr
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] & core->R[r];
+    core->gp.R[d] = core->gp.R[d] & core->gp.R[r];
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -147,13 +147,13 @@ void andi(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd & K
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] & K;
+    core->gp.R[d] = core->gp.R[d] & K;
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -163,13 +163,13 @@ void or(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd | Rr
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] | core->R[r];
+    core->gp.R[d] = core->gp.R[d] | core->gp.R[r];
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -179,13 +179,13 @@ void ori(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd | K
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] | K;
+    core->gp.R[d] = core->gp.R[d] | K;
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
 
     inc_pc(core);
 }
@@ -195,13 +195,13 @@ void eor(uint8_t d, uint8_t r, struct CORE *core) {
     // Rd <- Rd ^ Rr
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] ^ core->R[r];
+    core->gp.R[d] = core->gp.R[d] ^ core->gp.R[r];
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
     
     inc_pc(core);
 }
@@ -211,13 +211,13 @@ void com(uint8_t d, struct CORE *core) {
     // Rd <- $FF - Rd
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = ~core->R[d];
+    core->gp.R[d] = ~core->gp.R[d];
 
     // Update SREG
-    update_sreg_logic(core, core->R[d]);
+    update_sreg_logic(core, core->gp.R[d]);
     update_sreg_C(core, true);
     
     inc_pc(core);
@@ -228,10 +228,10 @@ void neg(uint8_t d, struct CORE *core) {
     // Rd <- $00 - Rd
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = -core->R[d];
+    core->gp.R[d] = -core->gp.R[d];
     inc_pc(core);
 }
 
@@ -240,10 +240,10 @@ void sbr(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd | K
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] | K;
+    core->gp.R[d] = core->gp.R[d] | K;
     inc_pc(core);
 }
 
@@ -252,10 +252,10 @@ void cbr(uint8_t d, uint8_t K, struct CORE *core) {
     // Rd <- Rd & ($FF - K)
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] & ~K;
+    core->gp.R[d] = core->gp.R[d] & ~K;
     inc_pc(core);
 }
 
@@ -264,10 +264,10 @@ void inc(uint8_t d, struct CORE *core) {
     // Rd <- Rd + 1
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] + 1;
+    core->gp.R[d] = core->gp.R[d] + 1;
     inc_pc(core);
 }
 
@@ -276,10 +276,10 @@ void dec(uint8_t d, struct CORE *core) {
     // Rd <- Rd - 1
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] - 1;
+    core->gp.R[d] = core->gp.R[d] - 1;
     inc_pc(core);
 }
 
@@ -288,10 +288,10 @@ void tst(uint8_t d, struct CORE *core) {
     // Rd <- Rd & Rd
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = core->R[d] & core->R[d];
+    core->gp.R[d] = core->gp.R[d] & core->gp.R[d];
     inc_pc(core);
 }
 
@@ -300,10 +300,10 @@ void clr(uint8_t d, struct CORE *core) {
     // Rd <- 0
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = 0;
+    core->gp.R[d] = 0;
     inc_pc(core);
 }
 
@@ -312,10 +312,10 @@ void ser(uint8_t d, struct CORE *core) {
     // Rd <- $FF
     // 1 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    core->R[d] = 0xFF;
+    core->gp.R[d] = 0xFF;
     inc_pc(core);
 }
 
@@ -324,12 +324,12 @@ void mul(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (UU)
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    uint16_t result = (uint16_t)core->R[d] * (uint16_t)core->R[r];
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    uint16_t result = (uint16_t)core->gp.R[d] * (uint16_t)core->gp.R[r];
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -338,12 +338,12 @@ void muls(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (SS)
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    int16_t result = (int16_t)core->R[d] * (int16_t)core->R[r];
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    int16_t result = (int16_t)core->gp.R[d] * (int16_t)core->gp.R[r];
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -352,12 +352,12 @@ void mulsu(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (SU)
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    int16_t result = (int16_t)core->R[d] * (uint16_t)core->R[r];
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    int16_t result = (int16_t)core->gp.R[d] * (uint16_t)core->gp.R[r];
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -366,12 +366,12 @@ void fmul(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (UU)
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    uint16_t result = (uint16_t)core->R[d] * (uint16_t)(core->R[r] << 1);
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    uint16_t result = (uint16_t)core->gp.R[d] * (uint16_t)(core->gp.R[r] << 1);
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -380,12 +380,12 @@ void fmuls(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (SS)
     // 2 cycle
 
-	uint8_t R_tmp = core->R[d];
+	uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    int16_t result = (int16_t)core->R[d] * (int16_t)(core->R[r] << 1);
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    int16_t result = (int16_t)core->gp.R[d] * (int16_t)(core->gp.R[r] << 1);
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }
 
@@ -394,11 +394,11 @@ void fmulsu(uint8_t d, uint8_t r, struct CORE *core) {
     // R1:R0 <- Rd * Rr (SU)
     // 2 cycle
 
-    uint8_t R_tmp = core->R[d];
+    uint8_t R_tmp = core->gp.R[d];
 
 	// Execute instruction 
-    int16_t result = (int16_t)core->R[d] * (uint16_t)(core->R[r] << 1);
-    core->R[0] = result & 0xFF;
-    core->R[1] = (result >> 8) & 0xFF;
+    int16_t result = (int16_t)core->gp.R[d] * (uint16_t)(core->gp.R[r] << 1);
+    core->gp.R[0] = result & 0xFF;
+    core->gp.R[1] = (result >> 8) & 0xFF;
     inc_pc(core);
 }

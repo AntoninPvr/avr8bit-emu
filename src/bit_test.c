@@ -6,16 +6,16 @@ void lsl(uint8_t d, struct CORE *core) {
     // Rd <- Rd << 1
     // 1 cycle
 
-    core->sreg.C = (core->R[d] & 0x80) >> 7;
-    core->R[d] = core->R[d] << 1;
+    core->sreg.C = (core->gp.R[d] & 0x80) >> 7;
+    core->gp.R[d] = core->gp.R[d] << 1;
     
 	// Update SREG
     // C updated by instruction
-    update_sreg_H(core, (core->R[d] & 0x0F) >> 3);
-    update_sreg_N(core, core->R[d] >> 7);
+    update_sreg_H(core, (core->gp.R[d] & 0x0F) >> 3);
+    update_sreg_N(core, core->gp.R[d] >> 7);
     update_sreg_V(core, core->sreg.N ^ core->sreg.C);
     update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_Z(core, sreg_Z_compute_bool(core->gp.R[d]));
 
 	inc_pc(core);
 }
@@ -26,14 +26,14 @@ void lsr(uint8_t d, struct CORE *core) {
     // Rd <- Rd >> 1
     // 1 cycle
 
-    core->sreg.C = core->R[d] & 0x01;
-    core->R[d] = core->R[d] >> 1;
+    core->sreg.C = core->gp.R[d] & 0x01;
+    core->gp.R[d] = core->gp.R[d] >> 1;
     
 	// Update SREG
     update_sreg_N(core, false);
     update_sreg_V(core, core->sreg.N ^ core->sreg.C);
     update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_Z(core, sreg_Z_compute_bool(core->gp.R[d]));
 
 	inc_pc(core);
 }
@@ -44,16 +44,16 @@ void rol(uint8_t d, struct CORE *core) {
     // Rd <- Rd << 1 | C
     // 1 cycle
     bool temp = core->sreg.C;
-    core->sreg.C = (core->R[d] & 0x80) >> 7;
-    core->R[d] = (core->R[d] << 1) | temp;
+    core->sreg.C = (core->gp.R[d] & 0x80) >> 7;
+    core->gp.R[d] = (core->gp.R[d] << 1) | temp;
     
 	// Update SREG
     // C updated by instruction
-    update_sreg_H(core, (core->R[d] & 0x0F) >> 3);
-    update_sreg_N(core, core->R[d] >> 7);
+    update_sreg_H(core, (core->gp.R[d] & 0x0F) >> 3);
+    update_sreg_N(core, core->gp.R[d] >> 7);
     update_sreg_V(core, core->sreg.N ^ core->sreg.C);
     update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_Z(core, sreg_Z_compute_bool(core->gp.R[d]));
 
 	inc_pc(core);
 }
@@ -64,15 +64,15 @@ void ror(uint8_t d, struct CORE *core) {
     // Rd <- Rd >> 1 | C << 7
     // 1 cycle
     bool temp = core->sreg.C;
-    core->sreg.C = core->R[d] & 0x01;
-    core->R[d] = (core->R[d] >> 1) | (temp << 7);
+    core->sreg.C = core->gp.R[d] & 0x01;
+    core->gp.R[d] = (core->gp.R[d] >> 1) | (temp << 7);
     
 	// Update SREG
     // C updated by instruction
-    update_sreg_N(core, core->R[d] >> 7);
+    update_sreg_N(core, core->gp.R[d] >> 7);
     update_sreg_V(core, core->sreg.N ^ core->sreg.C);
     update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_Z(core, sreg_Z_compute_bool(core->gp.R[d]));
 
 	inc_pc(core);
 }
@@ -82,14 +82,14 @@ void asr(uint8_t d, struct CORE *core) {
     // r(0) loaded into C
     // Rd <- Rd >> 1
     // 1 cycle
-    core->sreg.C = core->R[d] & 0x01;
-    core->R[d] = (core->R[d] & 0x80) | (core->R[d] >> 1);
+    core->sreg.C = core->gp.R[d] & 0x01;
+    core->gp.R[d] = (core->gp.R[d] & 0x80) | (core->gp.R[d] >> 1);
     
 	// Update SREG
-    update_sreg_N(core, core->R[d] >> 7);
+    update_sreg_N(core, core->gp.R[d] >> 7);
     update_sreg_V(core, core->sreg.N ^ core->sreg.C);
     update_sreg_S(core, sreg_S_compute_bool(core->sreg.N, core->sreg.V));
-    update_sreg_Z(core, sreg_Z_compute_bool(core->R[d]));
+    update_sreg_Z(core, sreg_Z_compute_bool(core->gp.R[d]));
 
 	inc_pc(core);
 }
@@ -98,7 +98,7 @@ void swap(uint8_t d, struct CORE *core) {
     // Swap Nibbles
     // Rd <- Rd(3:0) << 4 | Rd(7:4)
     // 1 cycle
-    core->R[d] = (core->R[d] & 0x0F) << 4 | (core->R[d] & 0xF0) >> 4;
+    core->gp.R[d] = (core->gp.R[d] & 0x0F) << 4 | (core->gp.R[d] & 0xF0) >> 4;
     
 	// Update SREG
     // NONE
@@ -110,7 +110,7 @@ void sbi(uint8_t IO, uint8_t n, struct CORE *core) {
     // Set Bit in I/O Register
     // I/O(n) <- 1
     // 2 cycle
-    core->R[IO] = core->R[IO] | (1 << n);
+    core->gp.R[IO] = core->gp.R[IO] | (1 << n);
     
 	// Update SREG
     // NONE
@@ -122,7 +122,7 @@ void cbi(uint8_t IO, uint8_t n, struct CORE *core) {
     // Clear Bit in I/O Register
     // I/O(n) <- 0
     // 2 cycle
-    core->R[IO] = core->R[IO] & ~(1 << n);
+    core->gp.R[IO] = core->gp.R[IO] & ~(1 << n);
     
 	// Update SREG
     // NONE
@@ -134,7 +134,7 @@ void bst(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Store from Register to T Flag
     // T <- Rd(b)
     // 1 cycle
-    core->sreg.T = (core->R[d] & (1 << b)) >> b;
+    core->sreg.T = (core->gp.R[d] & (1 << b)) >> b;
     
 	// Update SREG
     // T updated by instruction
@@ -146,7 +146,7 @@ void bld(uint8_t d, uint8_t b, struct CORE *core) {
     // Bit Load from T Flag to Register
     // Rd(b) <- T
     // 1 cycle
-    core->R[d] = (core->R[d] & ~(1 << b)) | (core->sreg.T << b);
+    core->gp.R[d] = (core->gp.R[d] & ~(1 << b)) | (core->sreg.T << b);
     
 	// Update SREG
     // NONE
