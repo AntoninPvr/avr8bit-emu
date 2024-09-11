@@ -3,6 +3,7 @@
 #include <stdbool.h>
 
 #include "core.h"
+#include "sreg_utils.h"
 
 void add(uint8_t d, uint8_t r, struct CORE *core);
 void adc(uint8_t d, uint8_t r, struct CORE *core);

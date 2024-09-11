@@ -16,3 +16,14 @@ uint8_t sreg_N_compute(uint8_t result);
 uint8_t sreg_V_compute(uint8_t Rd, uint8_t Rr, uint8_t result);
 uint8_t sreg_S_compute(bool N, bool V);
 uint8_t sreg_H_compute(uint8_t Rd, uint8_t Rr);
+
+void update_sreg_arithm(struct CORE *core, uint8_t Rd, uint8_t Rr, uint8_t result);
+
+void update_sreg_C(struct CORE *core, bool state);
+void update_sreg_Z(struct CORE *core, bool state);
+void update_sreg_N(struct CORE *core, bool state);
+void update_sreg_V(struct CORE *core, bool state);
+void update_sreg_S(struct CORE *core, bool state);
+void update_sreg_H(struct CORE *core, bool state);
+void update_sreg_T(struct CORE *core, bool state);
+void update_sreg_I(struct CORE *core, bool state);
