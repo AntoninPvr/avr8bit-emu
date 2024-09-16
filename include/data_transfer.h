@@ -3,12 +3,13 @@
 #include <stdbool.h>
 
 #include "core.h"
+#include "data_space.h"
 
 void mov(uint8_t d, uint8_t r, struct CORE *core);
 void movw(uint8_t d, uint8_t r, struct CORE *core);
 void ldi(uint8_t d, uint8_t K, struct CORE *core);
-void lds(uint8_t d, int16_t k, struct CORE *core);
-void ld_x(uint8_t d, struct CORE *core);
+void lds(uint8_t d, int16_t k, struct CORE *core, union DATA_SPACE *data_space);
+void ld_x(uint8_t d, struct CORE *core, union DATA_SPACE *data_space);
 void ld_x_inc(uint8_t d, struct CORE *core);
 void ld_x_dec(uint8_t d, struct CORE *core);
 void ld_y(uint8_t d, struct CORE *core);

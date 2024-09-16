@@ -59,5 +59,3 @@ struct CORE {
 };
 
 void inc_pc(struct CORE *core);
-
-void test(union GP *gp, struct CORE *core);
