@@ -5,6 +5,7 @@
 #include "core.h"
 #include "sram.h"
 #include "data_space.h"
+#include "sreg_utils.h"
 
 void rjmp(uint8_t k, struct CORE *core);
 void ijmp(struct CORE *core);
