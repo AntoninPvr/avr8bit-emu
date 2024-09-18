@@ -1,0 +1,175 @@
+\doxysection{SREG Union Reference}
+\hypertarget{unionSREG}{}\label{unionSREG}\index{SREG@{SREG}}
+
+
+Status Register.  
+
+
+
+
+{\ttfamily \#include $<$core.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{unionSREG_af1dd62470a70df61755d6c603453deb7}{sreg}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>bool \mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_acc737c8c4069d90e5a1a7d40bc9d3ff5}{Z}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_a19b4f3b833a433a4d1295605eb270236}{N}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_a65266291db7ac25c4224bc3db2e31313}{V}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_adf5d187c5144a174ff71f7ffa166183f}{S}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_ada622fbbb54ea500a5aa984dd4267ec0}{H}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_af62d380e6b8ff774db744080f3b35e19}{T}}: 1\\
+\>bool \mbox{\hyperlink{unionSREG_ad02a7edddde0721ab50c453ce5e2ae75}{I}}: 1\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Status Register. 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00010}{10}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{unionSREG_a0202b8cbfa6e113edb39f544e3623def}\label{unionSREG_a0202b8cbfa6e113edb39f544e3623def} 
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily struct  \{ ... \}  \mbox{\hyperlink{unionSREG}{SREG}}}
+
+\Hypertarget{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}\label{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78} 
+\index{SREG@{SREG}!C@{C}}
+\index{C@{C}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily bool SREG\+::C}
+
+Carry flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00013}{13}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{arithm__logic_8c_source_l00023}{adc()}}, \mbox{\hyperlink{bit__test_8c_source_l00080}{asr()}}, \mbox{\hyperlink{branch_8c_source_l00315}{brcc()}}, \mbox{\hyperlink{branch_8c_source_l00298}{brcs()}}, \mbox{\hyperlink{branch_8c_source_l00349}{brlo()}}, \mbox{\hyperlink{branch_8c_source_l00332}{brsh()}}, \mbox{\hyperlink{bit__test_8c_source_l00193}{clc()}}, \mbox{\hyperlink{branch_8c_source_l00132}{cpc()}}, \mbox{\hyperlink{bit__test_8c_source_l00003}{lsl()}}, \mbox{\hyperlink{bit__test_8c_source_l00023}{lsr()}}, \mbox{\hyperlink{bit__test_8c_source_l00041}{rol()}}, \mbox{\hyperlink{bit__test_8c_source_l00061}{ror()}}, \mbox{\hyperlink{arithm__logic_8c_source_l00086}{sbc()}}, \mbox{\hyperlink{arithm__logic_8c_source_l00102}{sbci()}}, \mbox{\hyperlink{bit__test_8c_source_l00181}{sec()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00067}{update\+\_\+sreg\+\_\+\+C()}}.
+
+\Hypertarget{unionSREG_ada622fbbb54ea500a5aa984dd4267ec0}\label{unionSREG_ada622fbbb54ea500a5aa984dd4267ec0} 
+\index{SREG@{SREG}!H@{H}}
+\index{H@{H}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily bool SREG\+::H}
+
+Half carry flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00018}{18}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{branch_8c_source_l00451}{brhc()}}, \mbox{\hyperlink{branch_8c_source_l00434}{brhs()}}, \mbox{\hyperlink{bit__test_8c_source_l00361}{clh()}}, \mbox{\hyperlink{bit__test_8c_source_l00349}{seh()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00087}{update\+\_\+sreg\+\_\+\+H()}}.
+
+\Hypertarget{unionSREG_ad02a7edddde0721ab50c453ce5e2ae75}\label{unionSREG_ad02a7edddde0721ab50c453ce5e2ae75} 
+\index{SREG@{SREG}!I@{I}}
+\index{I@{I}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{I}{I}}
+{\footnotesize\ttfamily bool SREG\+::I}
+
+Global interrupt enable/disable flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00020}{20}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{branch_8c_source_l00553}{brid()}}, \mbox{\hyperlink{branch_8c_source_l00536}{brie()}}, \mbox{\hyperlink{bit__test_8c_source_l00265}{cli()}}, \mbox{\hyperlink{bit__test_8c_source_l00253}{sei()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00095}{update\+\_\+sreg\+\_\+\+I()}}.
+
+\Hypertarget{unionSREG_a19b4f3b833a433a4d1295605eb270236}\label{unionSREG_a19b4f3b833a433a4d1295605eb270236} 
+\index{SREG@{SREG}!N@{N}}
+\index{N@{N}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily bool SREG\+::N}
+
+Negative flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00015}{15}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{bit__test_8c_source_l00080}{asr()}}, \mbox{\hyperlink{branch_8c_source_l00400}{brge()}}, \mbox{\hyperlink{branch_8c_source_l00417}{brlt()}}, \mbox{\hyperlink{branch_8c_source_l00366}{brmi()}}, \mbox{\hyperlink{branch_8c_source_l00383}{brpl()}}, \mbox{\hyperlink{bit__test_8c_source_l00217}{cln()}}, \mbox{\hyperlink{bit__test_8c_source_l00003}{lsl()}}, \mbox{\hyperlink{bit__test_8c_source_l00023}{lsr()}}, \mbox{\hyperlink{bit__test_8c_source_l00041}{rol()}}, \mbox{\hyperlink{bit__test_8c_source_l00061}{ror()}}, \mbox{\hyperlink{bit__test_8c_source_l00205}{sen()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00060}{update\+\_\+sreg\+\_\+logic()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00075}{update\+\_\+sreg\+\_\+\+N()}}.
+
+\Hypertarget{unionSREG_adf5d187c5144a174ff71f7ffa166183f}\label{unionSREG_adf5d187c5144a174ff71f7ffa166183f} 
+\index{SREG@{SREG}!S@{S}}
+\index{S@{S}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{S}{S}}
+{\footnotesize\ttfamily bool SREG\+::S}
+
+Sign bit, S = N \texorpdfstring{$^\wedge$}{\string^} V 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00017}{17}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{bit__test_8c_source_l00289}{cls()}}, \mbox{\hyperlink{bit__test_8c_source_l00277}{ses()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00060}{update\+\_\+sreg\+\_\+logic()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00083}{update\+\_\+sreg\+\_\+\+S()}}.
+
+\Hypertarget{unionSREG_af1dd62470a70df61755d6c603453deb7}\label{unionSREG_af1dd62470a70df61755d6c603453deb7} 
+\index{SREG@{SREG}!sreg@{sreg}}
+\index{sreg@{sreg}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{sreg}{sreg}}
+{\footnotesize\ttfamily uint8\+\_\+t SREG\+::sreg}
+
+Status register as a single byte 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00011}{11}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{bit__test_8c_source_l00169}{bclr()}}, \mbox{\hyperlink{branch_8c_source_l00247}{brbc()}}, \mbox{\hyperlink{branch_8c_source_l00230}{brbs()}}, and \mbox{\hyperlink{bit__test_8c_source_l00157}{bset()}}.
+
+\Hypertarget{unionSREG_af62d380e6b8ff774db744080f3b35e19}\label{unionSREG_af62d380e6b8ff774db744080f3b35e19} 
+\index{SREG@{SREG}!T@{T}}
+\index{T@{T}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily bool SREG\+::T}
+
+Transfer bit used by BLD and BST instructions 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00019}{19}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{bit__test_8c_source_l00145}{bld()}}, \mbox{\hyperlink{branch_8c_source_l00485}{brtc()}}, \mbox{\hyperlink{branch_8c_source_l00468}{brts()}}, \mbox{\hyperlink{bit__test_8c_source_l00133}{bst()}}, \mbox{\hyperlink{bit__test_8c_source_l00337}{clt()}}, \mbox{\hyperlink{bit__test_8c_source_l00325}{set()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00091}{update\+\_\+sreg\+\_\+\+T()}}.
+
+\Hypertarget{unionSREG_a65266291db7ac25c4224bc3db2e31313}\label{unionSREG_a65266291db7ac25c4224bc3db2e31313} 
+\index{SREG@{SREG}!V@{V}}
+\index{V@{V}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily bool SREG\+::V}
+
+Two\textquotesingle{}s complement overflow flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00016}{16}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{bit__test_8c_source_l00080}{asr()}}, \mbox{\hyperlink{branch_8c_source_l00400}{brge()}}, \mbox{\hyperlink{branch_8c_source_l00417}{brlt()}}, \mbox{\hyperlink{branch_8c_source_l00519}{brvc()}}, \mbox{\hyperlink{branch_8c_source_l00502}{brvs()}}, \mbox{\hyperlink{bit__test_8c_source_l00313}{clv()}}, \mbox{\hyperlink{bit__test_8c_source_l00003}{lsl()}}, \mbox{\hyperlink{bit__test_8c_source_l00023}{lsr()}}, \mbox{\hyperlink{bit__test_8c_source_l00041}{rol()}}, \mbox{\hyperlink{bit__test_8c_source_l00061}{ror()}}, \mbox{\hyperlink{bit__test_8c_source_l00301}{sev()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00060}{update\+\_\+sreg\+\_\+logic()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00079}{update\+\_\+sreg\+\_\+\+V()}}.
+
+\Hypertarget{unionSREG_acc737c8c4069d90e5a1a7d40bc9d3ff5}\label{unionSREG_acc737c8c4069d90e5a1a7d40bc9d3ff5} 
+\index{SREG@{SREG}!Z@{Z}}
+\index{Z@{Z}!SREG@{SREG}}
+\doxysubsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily bool SREG\+::Z}
+
+Zero flag 
+
+Definition at line \mbox{\hyperlink{core_8h_source_l00014}{14}} of file \mbox{\hyperlink{core_8h_source}{core.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{branch_8c_source_l00264}{breq()}}, \mbox{\hyperlink{branch_8c_source_l00281}{brne()}}, \mbox{\hyperlink{bit__test_8c_source_l00241}{clz()}}, \mbox{\hyperlink{bit__test_8c_source_l00229}{sez()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00051}{update\+\_\+sreg\+\_\+arithm()}}, \mbox{\hyperlink{sreg__utils_8c_source_l00060}{update\+\_\+sreg\+\_\+logic()}}, and \mbox{\hyperlink{sreg__utils_8c_source_l00071}{update\+\_\+sreg\+\_\+\+Z()}}.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{core_8h}{core.\+h}}\end{DoxyCompactItemize}

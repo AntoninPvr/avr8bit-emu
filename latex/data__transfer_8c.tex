@@ -1,0 +1,1314 @@
+\doxysection{src/data\+\_\+transfer.c File Reference}
+\hypertarget{data__transfer_8c}{}\label{data__transfer_8c}\index{src/data\_transfer.c@{src/data\_transfer.c}}
+{\ttfamily \#include "{}data\+\_\+transfer.\+h"{}}\newline
+Include dependency graph for data\+\_\+transfer.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data__transfer_8c_abb355560c23885e96f2e8850f4bef00d}{mov}} (uint8\+\_\+t d, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_aa9dbb192d392eb5ffdf7a2832978789d}{movw}} (uint8\+\_\+t d, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ab414f374b0921bb874428902acc149f9}{ldi}} (uint8\+\_\+t d, uint8\+\_\+t K, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_aee307c74620bf228152f114a152f25f9}{lds}} (uint8\+\_\+t d, int16\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a756802ff464ab004d4fed74a9191ca22}{ld\+\_\+x}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a84afc7ac161d7e1e459f739fb9798eb1}{ld\+\_\+x\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_afd950beabe97606be676038a154b9733}{ld\+\_\+x\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a5882d7596654fc28c77316e0ec7dcf4e}{ld\+\_\+y}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a51c0d2431c92e8eab06cc5bbfc1015b3}{ld\+\_\+y\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a00f04bb45fac5d8f6b7a6b8ae07f36a9}{ld\+\_\+y\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a1bc3cea6aeb93bf0cc8580f617389f36}{ldd\+\_\+y}} (uint8\+\_\+t d, uint8\+\_\+t q, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_afbc54042822526dfc273fcbbf45e3b30}{ld\+\_\+z}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ab528466d115dbe2575398a90a2ea7d67}{ld\+\_\+z\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ac9d1e12f4ee96a9385c58f9c8909b0fa}{ld\+\_\+z\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a476ce905eed618fa3166a89b6751648f}{ldd\+\_\+z}} (uint8\+\_\+t d, uint8\+\_\+t q, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a0ddf0b61d25df1671eae0ec535a19765}{sts}} (int16\+\_\+t k, uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ab9696ebed423e63188d242315bc521ad}{st\+\_\+x}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a3ef55dab742369c3d7028e8912bb02b1}{st\+\_\+x\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ab92492b3fc3a5faa96d36ef7ab3872ea}{st\+\_\+x\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_add3f65c3a0c183b96b88dc1f93f02f4e}{st\+\_\+y}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_adfc370d8ca1d0f072f0198def9c1a364}{st\+\_\+y\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a792fe30b9f9c88fdb5e5ce26ae950bd5}{st\+\_\+y\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_aa6821aa5b5ce8cc6e2b809f91f4c6853}{std\+\_\+y}} (uint8\+\_\+t d, uint8\+\_\+t q, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_adcb2e51fd0d7fc012677a70b1e01fd56}{st\+\_\+z}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a8a7fb130dda24d415fc8f1667e202308}{st\+\_\+z\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a10cfe525b0b2fcd717982d61d53c7d09}{st\+\_\+z\+\_\+dec}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a2e0efb6cf5eaf0ce3cbc415c7ec4185e}{std\+\_\+z}} (uint8\+\_\+t d, uint8\+\_\+t q, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a7f32632fe3f8116641e478a67cba9a9e}{lpm\+\_\+0}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}progmem\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a464c2fd20414165ae9229fb46e7ed36d}{lpm\+\_\+z}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}progmem\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ae07bc2526f3f121b57e16441dae8b7b4}{lpm\+\_\+z\+\_\+inc}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}progmem\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_abf04ec7a0ef737375fe155decc546b67}{in}} (uint8\+\_\+t d, uint8\+\_\+t A, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_ae0086006dcfb1a41bb2da5d2b2a5f45a}{out}} (uint8\+\_\+t A, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a57e8fd18b1ec0fa08ce0e00cc425bc34}{push}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_aada029e5ba6d4d6138d00463d07e3eee}{pop}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a627ea2ba4cdb51f8fbe4ebdac8795027}{xch}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a4a1a0f3ca857f72163e8e8417234ae98}{las}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_a37685323aa37b87c115354cdd1422417}{lac}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\item 
+void \mbox{\hyperlink{data__transfer_8c_aad4d89ec5850c0863f5677ce6147c4e4}{lat}} (uint8\+\_\+t d, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{data__transfer_8c_abf04ec7a0ef737375fe155decc546b67}\label{data__transfer_8c_abf04ec7a0ef737375fe155decc546b67} 
+\index{data\_transfer.c@{data\_transfer.c}!in@{in}}
+\index{in@{in}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{in()}{in()}}
+{\footnotesize\ttfamily void in (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{A,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00451}{451}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{comment}{//\ Read\ from\ I/O\ register}}
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ I/O[A]}}
+\DoxyCodeLine{00454\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00457\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a0b04df122ca6e06d0d10d2dcb5d404e9}{io\_reg}}[A];}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00460\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00463\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{data__space_8h_source_l00017}{DATA\+\_\+\+SPACE\+::io\+\_\+reg}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_a37685323aa37b87c115354cdd1422417}\label{data__transfer_8c_a37685323aa37b87c115354cdd1422417} 
+\index{data\_transfer.c@{data\_transfer.c}!lac@{lac}}
+\index{lac@{lac}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lac()}{lac()}}
+{\footnotesize\ttfamily void lac (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00546}{546}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \textcolor{comment}{//\ Load\ and\ clear\ register}}
+\DoxyCodeLine{00548\ \ \ \ \ \textcolor{comment}{//\ Only\ on\ SRAM}}
+\DoxyCodeLine{00549\ \ \ \ \ \textcolor{comment}{//\ In\ same\ time:}}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ (0xFF\ -\/\ Rd)\ \&\ (Z)}}
+\DoxyCodeLine{00551\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00555\ \ \ \ \ uint8\_t\ temp\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00556\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ (0xFF\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d])\ \&\ temp;}
+\DoxyCodeLine{00557\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ temp;}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00560\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00561\ }
+\DoxyCodeLine{00562\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00563\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a4a1a0f3ca857f72163e8e8417234ae98}\label{data__transfer_8c_a4a1a0f3ca857f72163e8e8417234ae98} 
+\index{data\_transfer.c@{data\_transfer.c}!las@{las}}
+\index{las@{las}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{las()}{las()}}
+{\footnotesize\ttfamily void las (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00527}{527}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \textcolor{comment}{//\ Load\ and\ set\ register}}
+\DoxyCodeLine{00529\ \ \ \ \ \textcolor{comment}{//\ Only\ on\ SRAM}}
+\DoxyCodeLine{00530\ \ \ \ \ \textcolor{comment}{//\ In\ same\ time:}}
+\DoxyCodeLine{00531\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ Rd\ ||\ (Z)}}
+\DoxyCodeLine{00532\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00533\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00536\ \ \ \ \ uint8\_t\ temp\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00537\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ ||\ temp;}
+\DoxyCodeLine{00538\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ temp;}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00541\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00544\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_aad4d89ec5850c0863f5677ce6147c4e4}\label{data__transfer_8c_aad4d89ec5850c0863f5677ce6147c4e4} 
+\index{data\_transfer.c@{data\_transfer.c}!lat@{lat}}
+\index{lat@{lat}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lat()}{lat()}}
+{\footnotesize\ttfamily void lat (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00565}{565}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{comment}{//\ Load\ and\ toggle\ register}}
+\DoxyCodeLine{00567\ \ \ \ \ \textcolor{comment}{//\ Only\ on\ SRAM}}
+\DoxyCodeLine{00568\ \ \ \ \ \textcolor{comment}{//\ In\ same\ time:}}
+\DoxyCodeLine{00569\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ Rd\ \string^\ (Z)}}
+\DoxyCodeLine{00570\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00572\ }
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00574\ \ \ \ \ uint8\_t\ temp\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00575\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \string^\ temp;}
+\DoxyCodeLine{00576\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ temp;}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00579\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00581\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00582\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a756802ff464ab004d4fed74a9191ca22}\label{data__transfer_8c_a756802ff464ab004d4fed74a9191ca22} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_x@{ld\_x}}
+\index{ld\_x@{ld\_x}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_x()}{ld\_x()}}
+{\footnotesize\ttfamily void ld\+\_\+x (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00061}{61}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ X\ as\ address}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (X)}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00067\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}];}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_afd950beabe97606be676038a154b9733}\label{data__transfer_8c_afd950beabe97606be676038a154b9733} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_x\_dec@{ld\_x\_dec}}
+\index{ld\_x\_dec@{ld\_x\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_x\_dec()}{ld\_x\_dec()}}
+{\footnotesize\ttfamily void ld\+\_\+x\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00091}{91}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ X\ as\ address\ and\ post-\/decrement\ X}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ X\ <-\/\ X\ -\/\ 1}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (X)}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00098\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}-\/-\/;}
+\DoxyCodeLine{00099\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}];}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_a84afc7ac161d7e1e459f739fb9798eb1}\label{data__transfer_8c_a84afc7ac161d7e1e459f739fb9798eb1} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_x\_inc@{ld\_x\_inc}}
+\index{ld\_x\_inc@{ld\_x\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_x\_inc()}{ld\_x\_inc()}}
+{\footnotesize\ttfamily void ld\+\_\+x\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00075}{75}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ X\ as\ address\ and\ post-\/increment\ X}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (X)}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ X\ <-\/\ X\ +\ 1}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00082\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}];}
+\DoxyCodeLine{00083\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}++;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_a5882d7596654fc28c77316e0ec7dcf4e}\label{data__transfer_8c_a5882d7596654fc28c77316e0ec7dcf4e} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_y@{ld\_y}}
+\index{ld\_y@{ld\_y}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_y()}{ld\_y()}}
+{\footnotesize\ttfamily void ld\+\_\+y (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00107}{107}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Y\ as\ address}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Y)}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00113\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}];}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_a00f04bb45fac5d8f6b7a6b8ae07f36a9}\label{data__transfer_8c_a00f04bb45fac5d8f6b7a6b8ae07f36a9} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_y\_dec@{ld\_y\_dec}}
+\index{ld\_y\_dec@{ld\_y\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_y\_dec()}{ld\_y\_dec()}}
+{\footnotesize\ttfamily void ld\+\_\+y\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00137}{137}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Y\ as\ address\ and\ post-\/decrement\ Y}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ Y\ <-\/\ Y\ -\/\ 1}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Y)}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00144\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}-\/-\/;}
+\DoxyCodeLine{00145\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}];}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_a51c0d2431c92e8eab06cc5bbfc1015b3}\label{data__transfer_8c_a51c0d2431c92e8eab06cc5bbfc1015b3} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_y\_inc@{ld\_y\_inc}}
+\index{ld\_y\_inc@{ld\_y\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_y\_inc()}{ld\_y\_inc()}}
+{\footnotesize\ttfamily void ld\+\_\+y\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00121}{121}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Y\ as\ address\ and\ post-\/increment\ Y}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Y)}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//\ Y\ <-\/\ Y\ +\ 1}}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00128\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}];}
+\DoxyCodeLine{00129\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}++;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00135\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_afbc54042822526dfc273fcbbf45e3b30}\label{data__transfer_8c_afbc54042822526dfc273fcbbf45e3b30} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_z@{ld\_z}}
+\index{ld\_z@{ld\_z}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_z()}{ld\_z()}}
+{\footnotesize\ttfamily void ld\+\_\+z (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00167}{167}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Z\ as\ address}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00173\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_ac9d1e12f4ee96a9385c58f9c8909b0fa}\label{data__transfer_8c_ac9d1e12f4ee96a9385c58f9c8909b0fa} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_z\_dec@{ld\_z\_dec}}
+\index{ld\_z\_dec@{ld\_z\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_z\_dec()}{ld\_z\_dec()}}
+{\footnotesize\ttfamily void ld\+\_\+z\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00197}{197}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Z\ as\ address\ and\ post-\/decrement\ Z}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ Z\ <-\/\ Z\ -\/\ 1}}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00204\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}-\/-\/;}
+\DoxyCodeLine{00205\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00211\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_ab528466d115dbe2575398a90a2ea7d67}\label{data__transfer_8c_ab528466d115dbe2575398a90a2ea7d67} 
+\index{data\_transfer.c@{data\_transfer.c}!ld\_z\_inc@{ld\_z\_inc}}
+\index{ld\_z\_inc@{ld\_z\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ld\_z\_inc()}{ld\_z\_inc()}}
+{\footnotesize\ttfamily void ld\+\_\+z\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00181}{181}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ from\ data\ space\ using\ Z\ as\ address\ and\ post-\/increment\ Z}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//\ Z\ <-\/\ Z\ +\ 1}}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00188\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00189\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}++;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00195\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a1bc3cea6aeb93bf0cc8580f617389f36}\label{data__transfer_8c_a1bc3cea6aeb93bf0cc8580f617389f36} 
+\index{data\_transfer.c@{data\_transfer.c}!ldd\_y@{ldd\_y}}
+\index{ldd\_y@{ldd\_y}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ldd\_y()}{ldd\_y()}}
+{\footnotesize\ttfamily void ldd\+\_\+y (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{q,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00153}{153}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ with\ displacement\ from\ data\ space\ using\ Y\ as\ address}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Y\ +\ q)}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00159\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}\ +\ q];}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_a476ce905eed618fa3166a89b6751648f}\label{data__transfer_8c_a476ce905eed618fa3166a89b6751648f} 
+\index{data\_transfer.c@{data\_transfer.c}!ldd\_z@{ldd\_z}}
+\index{ldd\_z@{ldd\_z}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ldd\_z()}{ldd\_z()}}
+{\footnotesize\ttfamily void ldd\+\_\+z (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{q,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00213}{213}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//\ Load\ indirect\ with\ displacement\ from\ data\ space\ using\ Z\ as\ address}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z\ +\ q)}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00219\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}\ +\ q];}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00225\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_ab414f374b0921bb874428902acc149f9}\label{data__transfer_8c_ab414f374b0921bb874428902acc149f9} 
+\index{data\_transfer.c@{data\_transfer.c}!ldi@{ldi}}
+\index{ldi@{ldi}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{ldi()}{ldi()}}
+{\footnotesize\ttfamily void ldi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{K,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00033}{33}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Load\ immediate\ 16\ <=\ d\ <=\ 31}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ K}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00039\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ K;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_aee307c74620bf228152f114a152f25f9}\label{data__transfer_8c_aee307c74620bf228152f114a152f25f9} 
+\index{data\_transfer.c@{data\_transfer.c}!lds@{lds}}
+\index{lds@{lds}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lds()}{lds()}}
+{\footnotesize\ttfamily void lds (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{int16\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00047}{47}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Load\ direct\ from\ data\ space}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ k}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ 2\ cycles}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00053\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[k];}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_a7f32632fe3f8116641e478a67cba9a9e}\label{data__transfer_8c_a7f32632fe3f8116641e478a67cba9a9e} 
+\index{data\_transfer.c@{data\_transfer.c}!lpm\_0@{lpm\_0}}
+\index{lpm\_0@{lpm\_0}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lpm\_0()}{lpm\_0()}}
+{\footnotesize\ttfamily void lpm\+\_\+0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{progmem\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00407}{407}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{comment}{//\ Load\ program\ memory\ to\ R0}}
+\DoxyCodeLine{00409\ \ \ \ \ \textcolor{comment}{//\ R0\ <-\/\ Z}}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00413\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad3651e347080a4db8542a315a4f57ca7}{R0}}\ =\ progmem\_space-\/>\mbox{\hyperlink{unionPROGMEM__SPACE_a2411eb593eeb645b7813e21210bafe0e}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00419\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00028}{PROGMEM\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00031}{GP\+::\+R0}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a464c2fd20414165ae9229fb46e7ed36d}\label{data__transfer_8c_a464c2fd20414165ae9229fb46e7ed36d} 
+\index{data\_transfer.c@{data\_transfer.c}!lpm\_z@{lpm\_z}}
+\index{lpm\_z@{lpm\_z}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lpm\_z()}{lpm\_z()}}
+{\footnotesize\ttfamily void lpm\+\_\+z (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{progmem\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00421}{421}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{comment}{//\ Load\ program\ memory\ to\ register\ using\ Z\ as\ address}}
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00427\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ progmem\_space-\/>\mbox{\hyperlink{unionPROGMEM__SPACE_a2411eb593eeb645b7813e21210bafe0e}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00430\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00433\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00028}{PROGMEM\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_ae07bc2526f3f121b57e16441dae8b7b4}\label{data__transfer_8c_ae07bc2526f3f121b57e16441dae8b7b4} 
+\index{data\_transfer.c@{data\_transfer.c}!lpm\_z\_inc@{lpm\_z\_inc}}
+\index{lpm\_z\_inc@{lpm\_z\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{lpm\_z\_inc()}{lpm\_z\_inc()}}
+{\footnotesize\ttfamily void lpm\+\_\+z\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionPROGMEM__SPACE}{PROGMEM\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{progmem\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00435}{435}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{comment}{//\ Load\ program\ memory\ to\ register\ using\ Z\ as\ address\ and\ post-\/increment\ Z}}
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (Z)}}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{comment}{//\ Z\ <-\/\ Z\ +\ 1}}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00442\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ progmem\_space-\/>\mbox{\hyperlink{unionPROGMEM__SPACE_a2411eb593eeb645b7813e21210bafe0e}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00443\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}++;}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00449\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00028}{PROGMEM\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_abb355560c23885e96f2e8850f4bef00d}\label{data__transfer_8c_abb355560c23885e96f2e8850f4bef00d} 
+\index{data\_transfer.c@{data\_transfer.c}!mov@{mov}}
+\index{mov@{mov}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{mov()}{mov()}}
+{\footnotesize\ttfamily void mov (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{r,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00003}{3}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{comment}{//\ Copy\ register\ r\ to\ register\ d}}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rr}}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00009\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_aa9dbb192d392eb5ffdf7a2832978789d}\label{data__transfer_8c_aa9dbb192d392eb5ffdf7a2832978789d} 
+\index{data\_transfer.c@{data\_transfer.c}!movw@{movw}}
+\index{movw@{movw}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{movw()}{movw()}}
+{\footnotesize\ttfamily void movw (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{r,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00017}{17}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Copy\ register\ pair\ r\ to\ register\ pair\ d}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rr}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Rd+1\ <-\/\ Rr+1}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00024\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{00025\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r\ +\ 1];}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_ae0086006dcfb1a41bb2da5d2b2a5f45a}\label{data__transfer_8c_ae0086006dcfb1a41bb2da5d2b2a5f45a} 
+\index{data\_transfer.c@{data\_transfer.c}!out@{out}}
+\index{out@{out}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{out()}{out()}}
+{\footnotesize\ttfamily void out (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{A,  }\item[{uint8\+\_\+t}]{r,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00465}{465}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{comment}{//\ Write\ to\ I/O\ register}}
+\DoxyCodeLine{00467\ \ \ \ \ \textcolor{comment}{//\ I/O[A]\ <-\/\ Rr}}
+\DoxyCodeLine{00468\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00471\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a0b04df122ca6e06d0d10d2dcb5d404e9}{io\_reg}}[A]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00474\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00477\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{data__space_8h_source_l00017}{DATA\+\_\+\+SPACE\+::io\+\_\+reg}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_aada029e5ba6d4d6138d00463d07e3eee}\label{data__transfer_8c_aada029e5ba6d4d6138d00463d07e3eee} 
+\index{data\_transfer.c@{data\_transfer.c}!pop@{pop}}
+\index{pop@{pop}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00495}{495}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00496\ \ \ \ \ \textcolor{comment}{//\ Pop\ register\ from\ stack}}
+\DoxyCodeLine{00497\ \ \ \ \ \textcolor{comment}{//\ SP\ <-\/\ SP\ +\ 1}}
+\DoxyCodeLine{00498\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ (SP)}}
+\DoxyCodeLine{00499\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00502\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a56792a0b44396c2af7e60821b6606ab4}{SP}}++;}
+\DoxyCodeLine{00503\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_ae0226524479643c6edd29796ecc94570}{sram}}[core-\/>\mbox{\hyperlink{structCORE_a56792a0b44396c2af7e60821b6606ab4}{SP}}];}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00506\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00509\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, \mbox{\hyperlink{core_8h_source_l00070}{CORE\+::\+SP}}, and \mbox{\hyperlink{data__space_8h_source_l00019}{DATA\+\_\+\+SPACE\+::sram}}.
+
+\Hypertarget{data__transfer_8c_a57e8fd18b1ec0fa08ce0e00cc425bc34}\label{data__transfer_8c_a57e8fd18b1ec0fa08ce0e00cc425bc34} 
+\index{data\_transfer.c@{data\_transfer.c}!push@{push}}
+\index{push@{push}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void push (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00479}{479}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00480\ \ \ \ \ \textcolor{comment}{//\ Push\ register\ to\ stack}}
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{comment}{//\ (SP)\ <-\/\ Rr}}
+\DoxyCodeLine{00482\ \ \ \ \ \textcolor{comment}{//\ SP\ <-\/\ SP\ -\/\ 1\ }}
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00486\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_ae0226524479643c6edd29796ecc94570}{sram}}[core-\/>\mbox{\hyperlink{structCORE_a56792a0b44396c2af7e60821b6606ab4}{SP}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00487\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a56792a0b44396c2af7e60821b6606ab4}{SP}}-\/-\/;}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00493\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, \mbox{\hyperlink{core_8h_source_l00070}{CORE\+::\+SP}}, and \mbox{\hyperlink{data__space_8h_source_l00019}{DATA\+\_\+\+SPACE\+::sram}}.
+
+\Hypertarget{data__transfer_8c_ab9696ebed423e63188d242315bc521ad}\label{data__transfer_8c_ab9696ebed423e63188d242315bc521ad} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_x@{st\_x}}
+\index{st\_x@{st\_x}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_x()}{st\_x()}}
+{\footnotesize\ttfamily void st\+\_\+x (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00241}{241}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ X\ as\ address}}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//\ (X)\ <-\/\ Rd}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00247\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00253\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_ab92492b3fc3a5faa96d36ef7ab3872ea}\label{data__transfer_8c_ab92492b3fc3a5faa96d36ef7ab3872ea} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_x\_dec@{st\_x\_dec}}
+\index{st\_x\_dec@{st\_x\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_x\_dec()}{st\_x\_dec()}}
+{\footnotesize\ttfamily void st\+\_\+x\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00271}{271}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ X\ as\ address\ and\ post-\/decrement\ X}}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{//\ X\ <-\/\ X\ -\/\ 1}}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{comment}{//\ (X)\ <-\/\ Rd}}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00278\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}-\/-\/;}
+\DoxyCodeLine{00279\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00285\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_a3ef55dab742369c3d7028e8912bb02b1}\label{data__transfer_8c_a3ef55dab742369c3d7028e8912bb02b1} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_x\_inc@{st\_x\_inc}}
+\index{st\_x\_inc@{st\_x\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_x\_inc()}{st\_x\_inc()}}
+{\footnotesize\ttfamily void st\+\_\+x\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00255}{255}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ X\ as\ address\ and\ post-\/increment\ X}}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{comment}{//\ (X)\ <-\/\ Rd}}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{comment}{//\ X\ <-\/\ X\ +\ 1}}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00262\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00263\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_afc4b9b50187c0266416d399c5b6ec6d0}{X}}++;}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00269\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00057}{GP\+::X}}.
+
+\Hypertarget{data__transfer_8c_add3f65c3a0c183b96b88dc1f93f02f4e}\label{data__transfer_8c_add3f65c3a0c183b96b88dc1f93f02f4e} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_y@{st\_y}}
+\index{st\_y@{st\_y}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_y()}{st\_y()}}
+{\footnotesize\ttfamily void st\+\_\+y (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00287}{287}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Y\ as\ address}}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{comment}{//\ (Y)\ <-\/\ Rd}}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00293\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00299\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_a792fe30b9f9c88fdb5e5ce26ae950bd5}\label{data__transfer_8c_a792fe30b9f9c88fdb5e5ce26ae950bd5} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_y\_dec@{st\_y\_dec}}
+\index{st\_y\_dec@{st\_y\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_y\_dec()}{st\_y\_dec()}}
+{\footnotesize\ttfamily void st\+\_\+y\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00317}{317}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Y\ as\ address\ and\ post-\/decrement\ Y}}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{comment}{//\ Y\ <-\/\ Y\ -\/\ 1}}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{comment}{//\ (Y)\ <-\/\ Rd}}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00324\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}-\/-\/;}
+\DoxyCodeLine{00325\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00331\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_adfc370d8ca1d0f072f0198def9c1a364}\label{data__transfer_8c_adfc370d8ca1d0f072f0198def9c1a364} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_y\_inc@{st\_y\_inc}}
+\index{st\_y\_inc@{st\_y\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_y\_inc()}{st\_y\_inc()}}
+{\footnotesize\ttfamily void st\+\_\+y\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00301}{301}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Y\ as\ address\ and\ post-\/increment\ Y}}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{comment}{//\ (Y)\ <-\/\ Rd}}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{comment}{//\ Y\ <-\/\ Y\ +\ 1}}
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00308\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00309\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}++;}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00315\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_adcb2e51fd0d7fc012677a70b1e01fd56}\label{data__transfer_8c_adcb2e51fd0d7fc012677a70b1e01fd56} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_z@{st\_z}}
+\index{st\_z@{st\_z}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_z()}{st\_z()}}
+{\footnotesize\ttfamily void st\+\_\+z (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00347}{347}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Z\ as\ address}}
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ Rd}}
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00353\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00359\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a10cfe525b0b2fcd717982d61d53c7d09}\label{data__transfer_8c_a10cfe525b0b2fcd717982d61d53c7d09} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_z\_dec@{st\_z\_dec}}
+\index{st\_z\_dec@{st\_z\_dec}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_z\_dec()}{st\_z\_dec()}}
+{\footnotesize\ttfamily void st\+\_\+z\+\_\+dec (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00377}{377}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Z\ as\ address\ and\ post-\/decrement\ Z}}
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{comment}{//\ Z\ <-\/\ Z\ -\/\ 1}}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ Rd}}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{comment}{//\ 3\ cycle}}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00384\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}-\/-\/;}
+\DoxyCodeLine{00385\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00391\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a8a7fb130dda24d415fc8f1667e202308}\label{data__transfer_8c_a8a7fb130dda24d415fc8f1667e202308} 
+\index{data\_transfer.c@{data\_transfer.c}!st\_z\_inc@{st\_z\_inc}}
+\index{st\_z\_inc@{st\_z\_inc}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{st\_z\_inc()}{st\_z\_inc()}}
+{\footnotesize\ttfamily void st\+\_\+z\+\_\+inc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00361}{361}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ to\ data\ space\ using\ Z\ as\ address\ and\ post-\/increment\ Z}}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{comment}{//\ (Z)\ <-\/\ Rd}}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{comment}{//\ Z\ <-\/\ Z\ +\ 1}}
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00368\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00369\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}++;}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00375\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_aa6821aa5b5ce8cc6e2b809f91f4c6853}\label{data__transfer_8c_aa6821aa5b5ce8cc6e2b809f91f4c6853} 
+\index{data\_transfer.c@{data\_transfer.c}!std\_y@{std\_y}}
+\index{std\_y@{std\_y}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{std\_y()}{std\_y()}}
+{\footnotesize\ttfamily void std\+\_\+y (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{q,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00333}{333}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ with\ displacement\ to\ data\ space\ using\ Y\ as\ address}}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{comment}{//\ (Y\ +\ q)\ <-\/\ Rd}}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00339\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_aa6d73c5ea1a4278475943f2c11879913}{Y}}\ +\ q]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00345\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00058}{GP\+::Y}}.
+
+\Hypertarget{data__transfer_8c_a2e0efb6cf5eaf0ce3cbc415c7ec4185e}\label{data__transfer_8c_a2e0efb6cf5eaf0ce3cbc415c7ec4185e} 
+\index{data\_transfer.c@{data\_transfer.c}!std\_z@{std\_z}}
+\index{std\_z@{std\_z}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{std\_z()}{std\_z()}}
+{\footnotesize\ttfamily void std\+\_\+z (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{q,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00393}{393}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{comment}{//\ Store\ indirect\ with\ displacement\ to\ data\ space\ using\ Z\ as\ address}}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{comment}{//\ (Z\ +\ q)\ <-\/\ Rd}}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00399\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}\ +\ q]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00405\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+
+\Hypertarget{data__transfer_8c_a0ddf0b61d25df1671eae0ec535a19765}\label{data__transfer_8c_a0ddf0b61d25df1671eae0ec535a19765} 
+\index{data\_transfer.c@{data\_transfer.c}!sts@{sts}}
+\index{sts@{sts}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{sts()}{sts()}}
+{\footnotesize\ttfamily void sts (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{k,  }\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00227}{227}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{comment}{//\ Store\ direct\ to\ data\ space}}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ k\ <-\/\ Rd}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{comment}{//\ 2\ cycles}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00233\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[k]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00239\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, and \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}.
+
+\Hypertarget{data__transfer_8c_a627ea2ba4cdb51f8fbe4ebdac8795027}\label{data__transfer_8c_a627ea2ba4cdb51f8fbe4ebdac8795027} 
+\index{data\_transfer.c@{data\_transfer.c}!xch@{xch}}
+\index{xch@{xch}!data\_transfer.c@{data\_transfer.c}}
+\doxysubsubsection{\texorpdfstring{xch()}{xch()}}
+{\footnotesize\ttfamily void xch (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{data__transfer_8c_source_l00511}{511}} of file \mbox{\hyperlink{data__transfer_8c_source}{data\+\_\+transfer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \textcolor{comment}{//\ Exchange\ register\ with\ stack}}
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/>\ (SP)}}
+\DoxyCodeLine{00514\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{00517\ \ \ \ \ uint8\_t\ temp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{00518\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}];}
+\DoxyCodeLine{00519\ \ \ \ \ data\_space-\/>\mbox{\hyperlink{unionDATA__SPACE_a682bdd91dcf463f111c89035d30747f5}{data}}[core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ade44d84fcdb386b748507fce7b7ee97e}{Z}}]\ =\ temp;}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{00522\ \ \ \ \ \textcolor{comment}{//\ NONE}}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{00525\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{data__space_8h_source_l00014}{DATA\+\_\+\+SPACE\+::data}}, \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlink{core_8c_source_l00003}{inc\+\_\+pc()}}, \mbox{\hyperlink{core_8h_source_l00029}{GP\+::R}}, and \mbox{\hyperlink{core_8h_source_l00059}{GP\+::Z}}.
+

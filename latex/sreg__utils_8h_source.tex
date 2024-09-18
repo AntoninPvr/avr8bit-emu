@@ -1,0 +1,36 @@
+\doxysection{sreg\+\_\+utils.\+h}
+\hypertarget{sreg__utils_8h_source}{}\label{sreg__utils_8h_source}\index{include/sreg\_utils.h@{include/sreg\_utils.h}}
+\mbox{\hyperlink{sreg__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{core_8h}{core.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00007}00007\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_a270ead6fc3dc4b8c8b5c5266adef95b6}{sreg\_H\_compute\_bool}}(uint8\_t\ Rd,\ uint8\_t\ Rr);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00008}00008\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_a9512b562af3eb041bd28956f004645db}{sreg\_Z\_compute\_bool}}(uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00009}00009\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_a2b75a91d6d1c7df80fb3d7ce03f36d80}{sreg\_C\_compute\_bool}}(uint8\_t\ Rd,\ uint8\_t\ Rr);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00010}00010\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_a1ea433960a4d9d3b42a34d870eabdab4}{sreg\_N\_compute\_bool}}(uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00011}00011\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_a09a5986c65df7bba62956905b0175560}{sreg\_V\_compute\_bool}}(uint8\_t\ Rd,\ uint8\_t\ Rr,\ uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00012}00012\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{sreg__utils_8h_ac677d9ea450e734a967cb6f6fc4c92e3}{sreg\_S\_compute\_bool}}(\textcolor{keywordtype}{bool}\ N,\ \textcolor{keywordtype}{bool}\ V);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00013}00013\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_af980185dfcd2473a80b5a3287259fb51}{sreg\_C\_compute}}(uint8\_t\ Rd,\ uint8\_t\ Rr);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00014}00014\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_a2015d6f46331be03c702c54efb0fa236}{sreg\_Z\_compute}}(uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00015}00015\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_ae3ac0cfe7709bfe5a345fc7827a57a3a}{sreg\_N\_compute}}(uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00016}00016\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_a969a2a5ba8a41455df15449f4eda2f0a}{sreg\_V\_compute}}(uint8\_t\ Rd,\ uint8\_t\ Rr,\ uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00017}00017\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_ab70ffe46fbddea5daa04325d62f8b62b}{sreg\_S\_compute}}(\textcolor{keywordtype}{bool}\ N,\ \textcolor{keywordtype}{bool}\ V);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00018}00018\ uint8\_t\ \mbox{\hyperlink{sreg__utils_8h_aa21ec4f5d908ce38a0cfb628145f12c0}{sreg\_H\_compute}}(uint8\_t\ Rd,\ uint8\_t\ Rr);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00020}00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ uint8\_t\ Rd,\ uint8\_t\ Rr,\ uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00021}00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ uint8\_t\ result);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00023}00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_aebcd4c16a776b76e8155f372fba821cd}{update\_sreg\_C}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00024}00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a92851c1a79cb5fc05a13457452ca3771}{update\_sreg\_Z}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00025}00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_aaa53cd390525307ff5efa5a5094f6489}{update\_sreg\_N}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_aa2a7d04cf0085dc9604267845f81383a}{update\_sreg\_V}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00027}00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a5ec53a8ee817edac91c71906296dc36a}{update\_sreg\_S}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00028}00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a45eeec74d16900b4016c5520b2c964c1}{update\_sreg\_H}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00029}00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a320e1e1eaa7b4732542325b8cff895a4}{update\_sreg\_T}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{\Hypertarget{sreg__utils_8h_source_l00030}00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sreg__utils_8h_a3f300490c130d9d2966923ba1d744279}{update\_sreg\_I}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core,\ \textcolor{keywordtype}{bool}\ state);}
+
+\end{DoxyCode}

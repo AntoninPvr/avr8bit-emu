@@ -1,0 +1,183 @@
+\chapter{AVR-\/\+EMU}
+\hypertarget{md_README}{}\label{md_README}\index{AVR-\/EMU@{AVR-\/EMU}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ Simple avr emulator
+
+{\bfseries{Work in progress}} This project is still in development and not ready for use. Not all instructions are implemented yet. There are still large amounts of potentials flaws and bugs.\hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Implemented}{Implemented}}\label{md_README_autotoc_md1}
+Core\+:
+
+
+\begin{DoxyItemize}
+\item 32 8bit General purpose register
+\item \doxylink{unionSREG}{SREG} flags register
+\item 16bit SP stack pointer
+\item 16bit PC program counter
+\item \doxylink{structSRAM}{SRAM} memory
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Arithmetic and logic instructions}{Arithmetic and logic instructions}}\label{md_README_autotoc_md2}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endhead
+{\ttfamily ADC}   &Add with carry   &❌    \\\cline{1-3}
+{\ttfamily ADD}   &Add without carry   &❌    \\\cline{1-3}
+{\ttfamily ADIW}   &Add immediate to word   &❌    \\\cline{1-3}
+{\ttfamily SUB}   &Subtract without carry   &❌    \\\cline{1-3}
+{\ttfamily SUBI}   &Subtract immediate   &❌    \\\cline{1-3}
+{\ttfamily SBC}   &Subtract with carry   &❌    \\\cline{1-3}
+{\ttfamily SBCI}   &Subtract immediate with carry   &❌    \\\cline{1-3}
+{\ttfamily SBIW}   &Subtract immediate from word   &❌    \\\cline{1-3}
+{\ttfamily AND}   &Logical AND   &❌    \\\cline{1-3}
+{\ttfamily ANDI}   &Logical AND with immediate   &❌    \\\cline{1-3}
+{\ttfamily OR}   &Logical OR   &❌    \\\cline{1-3}
+{\ttfamily ORI}   &Logical OR with immediate   &❌    \\\cline{1-3}
+{\ttfamily EOR}   &Logical Exclusive OR   &❌    \\\cline{1-3}
+{\ttfamily COM}   &One\textquotesingle{}s complement   &❌    \\\cline{1-3}
+{\ttfamily NEG}   &Two\textquotesingle{}s complement   &❌    \\\cline{1-3}
+{\ttfamily SBR}   &Set bits in register   &❌    \\\cline{1-3}
+{\ttfamily CBR}   &Clear bits in register   &❌    \\\cline{1-3}
+{\ttfamily INC}   &Increment   &❌    \\\cline{1-3}
+{\ttfamily DEC}   &Decrement   &❌    \\\cline{1-3}
+{\ttfamily TST}   &Test for zero or minus   &❌    \\\cline{1-3}
+{\ttfamily CLR}   &Clear register   &❌    \\\cline{1-3}
+{\ttfamily SER}   &Set all bits in register   &❌    \\\cline{1-3}
+{\ttfamily MUL}   &Multiply unsigned   &❌    \\\cline{1-3}
+{\ttfamily MULS}   &Multiply signed   &❌    \\\cline{1-3}
+{\ttfamily MULSU}   &Multiply signed with unsigned   &❌    \\\cline{1-3}
+{\ttfamily FMUL}   &Fractional multiply unsigned   &❌    \\\cline{1-3}
+{\ttfamily FMULS}   &Fractional multiply signed   &❌    \\\cline{1-3}
+{\ttfamily FMULSU}   &Fractional multiply signed with unsigned   &❌    \\\cline{1-3}
+{\ttfamily DES}   &Data encryption   &❌   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{Branch instruction}{Branch instruction}}\label{md_README_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endhead
+{\ttfamily RJMP}   &Relative jump   &❌    \\\cline{1-3}
+{\ttfamily IJMP}   &Indirect jump   &❌    \\\cline{1-3}
+{\ttfamily EIJMP}   &Extended indirect jump   &❌    \\\cline{1-3}
+{\ttfamily JMP}   &Jump   &❌    \\\cline{1-3}
+{\ttfamily RCALL}   &Relative call subroutine   &❌    \\\cline{1-3}
+{\ttfamily ICALL}   &Indirect call subroutine   &❌    \\\cline{1-3}
+{\ttfamily EICALL}   &Extended indirect call subroutine   &❌    \\\cline{1-3}
+{\ttfamily CALL}   &Call subroutine   &❌    \\\cline{1-3}
+{\ttfamily RET}   &Return from subroutine   &❌    \\\cline{1-3}
+{\ttfamily RETI}   &Return from interrupt   &❌    \\\cline{1-3}
+{\ttfamily CPSE}   &Compare, skip if equal   &❌    \\\cline{1-3}
+{\ttfamily CP}   &Compare   &❌    \\\cline{1-3}
+{\ttfamily CPC}   &Compare with carry   &❌    \\\cline{1-3}
+{\ttfamily CPI}   &Compare with immediate   &❌    \\\cline{1-3}
+{\ttfamily SBRC}   &Skip if bit in register cleared   &❌    \\\cline{1-3}
+{\ttfamily SBRS}   &Skip if bit in register set   &❌    \\\cline{1-3}
+{\ttfamily SBIC}   &Skip if bit in I/O register cleared   &❌    \\\cline{1-3}
+{\ttfamily SBIS}   &Skip if bit in I/O register set   &❌    \\\cline{1-3}
+{\ttfamily BRBS}   &Branch if status flag set   &❌    \\\cline{1-3}
+{\ttfamily BRBC}   &Branch if status flag cleared   &❌    \\\cline{1-3}
+{\ttfamily BREQ}   &Branch if equal   &❌    \\\cline{1-3}
+{\ttfamily BRNE}   &Branch if not equal   &❌    \\\cline{1-3}
+{\ttfamily BRCS}   &Branch if carry set   &❌    \\\cline{1-3}
+{\ttfamily BRCC}   &Branch if carry cleared   &❌    \\\cline{1-3}
+{\ttfamily BRSH}   &Branch if same or higher   &❌    \\\cline{1-3}
+{\ttfamily BRLO}   &Branch if lower   &❌    \\\cline{1-3}
+{\ttfamily BRMI}   &Branch if minus   &❌    \\\cline{1-3}
+{\ttfamily BRPL}   &Branch if plus   &❌    \\\cline{1-3}
+{\ttfamily BRGE}   &Branch if greater or equal (signed)   &❌    \\\cline{1-3}
+{\ttfamily BRLT}   &Branch if less than (signed)   &❌    \\\cline{1-3}
+{\ttfamily BRHS}   &Branch if half carry or carry set   &❌    \\\cline{1-3}
+{\ttfamily BRHC}   &Branch if half carry or carry cleared   &❌    \\\cline{1-3}
+{\ttfamily BRTS}   &Branch if T flag set   &❌    \\\cline{1-3}
+{\ttfamily BRTC}   &Branch if T flag cleared   &❌    \\\cline{1-3}
+{\ttfamily BRVS}   &Branch if overflow set   &❌    \\\cline{1-3}
+{\ttfamily BRVC}   &Branch if overflow cleared   &❌    \\\cline{1-3}
+{\ttfamily BRIE}   &Branch if interrupt enabled   &❌    \\\cline{1-3}
+{\ttfamily BRID}   &Branch if interrupt disabled   &❌   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{Data transfer instructions}{Data transfer instructions}}\label{md_README_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endhead
+{\ttfamily MOV}   &Copy register   &❌    \\\cline{1-3}
+{\ttfamily MOVW}   &Copy register pair   &❌    \\\cline{1-3}
+{\ttfamily LDI}   &Load immediate   &❌    \\\cline{1-3}
+{\ttfamily LDS}   &Load direct from data space   &❌    \\\cline{1-3}
+{\ttfamily LD}   &Load indirect from data space   &❌    \\\cline{1-3}
+{\ttfamily LDD}   &Load indirect with displacement   &❌    \\\cline{1-3}
+{\ttfamily STS}   &Store direct to data space   &❌    \\\cline{1-3}
+{\ttfamily ST}   &Store indirect to data space   &❌   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md5}{}\doxysection{\texorpdfstring{Bit and bit-\/test instructions}{Bit and bit-test instructions}}\label{md_README_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endhead
+{\ttfamily LSL}   &Logical shift left   &❌    \\\cline{1-3}
+{\ttfamily LSR}   &Logical shift right   &❌    \\\cline{1-3}
+{\ttfamily ROL}   &Rotate left through carry   &❌    \\\cline{1-3}
+{\ttfamily ROR}   &Rotate right through carry   &❌    \\\cline{1-3}
+{\ttfamily ASR}   &Arithmetic shift right   &❌    \\\cline{1-3}
+{\ttfamily SWAP}   &Swap nibbles   &❌    \\\cline{1-3}
+{\ttfamily SBI}   &Set bit in I/O register   &❌    \\\cline{1-3}
+{\ttfamily CBI}   &Clear bit in I/O register   &❌    \\\cline{1-3}
+{\ttfamily BST}   &Bit store from register to T   &❌    \\\cline{1-3}
+{\ttfamily BLD}   &Bit load from T to register   &❌    \\\cline{1-3}
+{\ttfamily BSET}   &Flag set   &❌    \\\cline{1-3}
+{\ttfamily BCLR}   &Flag clear   &❌    \\\cline{1-3}
+{\ttfamily SEC}   &Set carry flag   &❌    \\\cline{1-3}
+{\ttfamily CLC}   &Clear carry flag   &❌    \\\cline{1-3}
+{\ttfamily SEN}   &Set negative flag   &❌    \\\cline{1-3}
+{\ttfamily CLN}   &Clear negative flag   &❌    \\\cline{1-3}
+{\ttfamily SEZ}   &Set zero flag   &❌    \\\cline{1-3}
+{\ttfamily CLZ}   &Clear zero flag   &❌    \\\cline{1-3}
+{\ttfamily SEI}   &Set interrupt flag   &❌    \\\cline{1-3}
+{\ttfamily CLI}   &Clear interrupt flag   &❌    \\\cline{1-3}
+{\ttfamily SES}   &Set signed flag   &❌    \\\cline{1-3}
+{\ttfamily CLS}   &Clear signed flag   &❌    \\\cline{1-3}
+{\ttfamily SEV}   &Set overflow flag   &❌    \\\cline{1-3}
+{\ttfamily CLV}   &Clear overflow flag   &❌    \\\cline{1-3}
+{\ttfamily SET}   &Set T flag   &❌    \\\cline{1-3}
+{\ttfamily CLT}   &Clear T flag   &❌    \\\cline{1-3}
+{\ttfamily SEH}   &Set half carry flag   &❌    \\\cline{1-3}
+{\ttfamily CLH}   &Clear half carry flag   &❌   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{MCU control instructions}{MCU control instructions}}\label{md_README_autotoc_md6}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ mnemonic   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ status    }\\\cline{1-3}
+\endhead
+{\ttfamily BREAK}   &Break   &✅    \\\cline{1-3}
+{\ttfamily NOP}   &No operation   &✅    \\\cline{1-3}
+{\ttfamily SLEEP}   &Sleep   &❌    \\\cline{1-3}
+{\ttfamily WDR}   &Watchdog reset   &❌   \\\cline{1-3}
+\end{longtabu}
