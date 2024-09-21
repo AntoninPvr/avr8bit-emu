@@ -1,16 +1,5 @@
 #include "arithm_logic.h"
 
-/**
- * @brief Add without carry
- *  Rd <- Rd + Rr
- * 
- * 
- * 1 cycle
- * 
- * @param d Destination register index
- * @param r Source register index
- * @param core Pointer to the CORE structure
- */
 void add(uint8_t d, uint8_t r, struct CORE *core) {
 	uint8_t R_tmp = core->gp.R[d];
 
