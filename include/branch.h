@@ -1,3 +1,13 @@
+/**
+ * @file      branch.h
+ * @brief     Branching and jumps instructions
+ * @details   Contains all atomic branching and jumps instructions
+ * @author    Antonin Pivard
+ * @date      2024
+ * @warning   Not tested
+ * @copyright GNU General Public License v3.0
+ */
+
 #pragma once
 #include <stdint.h>
 #include <stdbool.h>

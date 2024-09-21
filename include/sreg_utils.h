@@ -1,3 +1,12 @@
+/**
+ * @file      sreg_utils.h
+ * @brief     Functions for manipulating the Status Register (SREG)
+ * @author    Antonin Pivard
+ * @date      2024
+ * @warning   Not tested
+ * @copyright GNU General Public License v3.0
+ */
+
 #pragma once
 #include <stdint.h>
 #include <stdbool.h>

@@ -1,3 +1,13 @@
+/**
+ * @file      data_transfer.h
+ * @brief     Data transfer instructions
+ * @details   Contains all atomic data transfer instructions
+ * @author    Antonin Pivard
+ * @date      2024
+ * @warning   Not tested
+ * @copyright GNU General Public License v3.0
+ */
+
 #pragma once
 #include <stdint.h>
 #include <stdbool.h>

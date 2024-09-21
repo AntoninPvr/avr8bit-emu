@@ -1,3 +1,13 @@
+/**
+ * @file      bit_test.h
+ * @brief     Bit testings and manipulations
+ * @details   Contains all atomic bit testings and manipulations
+ * @author    Antonin Pivard
+ * @date      2024
+ * @warning   Not tested
+ * @copyright GNU General Public License v3.0
+ */
+
 #pragma once
 #include <stdint.h>
 #include <stdbool.h>

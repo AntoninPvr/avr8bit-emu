@@ -1,11 +1,11 @@
-/*! 
- *  @file      arithm_logic.h
- *  @brief     Arithmetic and logic operations
- *  @details   Contains all atomic arithmetic and logic operations
- *  @author    Antonin Pivard
- *  @date      2024
- *  @warning   Not tested
- *  @copyright GNU General Public License v3.0
+/**
+ * @file      arithm_logic.h
+ * @brief     Arithmetic and logic operations
+ * @details   Contains all atomic arithmetic and logic operations
+ * @author    Antonin Pivard
+ * @date      2024
+ * @warning   Not tested
+ * @copyright GNU General Public License v3.0
  */
 
 #pragma once
