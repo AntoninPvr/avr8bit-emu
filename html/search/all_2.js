@@ -13,7 +13,7 @@ var searchData=
   ['clv_10',['clv',['../bit__test_8h.html#abd2f4ffff458c2c83a5c6a5ac09ef873',1,'clv(struct CORE *core):&#160;bit_test.c'],['../bit__test_8c.html#abd2f4ffff458c2c83a5c6a5ac09ef873',1,'clv(struct CORE *core):&#160;bit_test.c']]],
   ['clz_11',['clz',['../bit__test_8h.html#abaad19a7528a28a9031801651c94acf1',1,'clz(struct CORE *core):&#160;bit_test.c'],['../bit__test_8c.html#abaad19a7528a28a9031801651c94acf1',1,'clz(struct CORE *core):&#160;bit_test.c']]],
   ['com_12',['com',['../arithm__logic_8h.html#aacf52a73b7ec8048e625df19a91834a8',1,'com(uint8_t d, struct CORE *core):&#160;arithm_logic.c'],['../arithm__logic_8c.html#aacf52a73b7ec8048e625df19a91834a8',1,'com(uint8_t d, struct CORE *core):&#160;arithm_logic.c']]],
-  ['control_20instructions_13',['MCU control instructions',['../md_README.html#autotoc_md6',1,'']]],
+  ['control_20instructions_13',['MCU control instructions',['../index.html#autotoc_md6',1,'']]],
   ['core_14',['core',['../structAVR__EMU.html#a4e5f2462f16e8582b88197c20f3bb47c',1,'AVR_EMU::core'],['../structCORE.html',1,'CORE']]],
   ['core_2ec_15',['core.c',['../core_8c.html',1,'']]],
   ['core_2eh_16',['core.h',['../core_8h.html',1,'']]],

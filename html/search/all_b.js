@@ -2,7 +2,7 @@ var searchData=
 [
   ['main_0',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
   ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
-  ['mcu_20control_20instructions_2',['MCU control instructions',['../md_README.html#autotoc_md6',1,'']]],
+  ['mcu_20control_20instructions_2',['MCU control instructions',['../index.html#autotoc_md6',1,'']]],
   ['mcu_5fcontrol_2ec_3',['mcu_control.c',['../mcu__control_8c.html',1,'']]],
   ['mcu_5fcontrol_2eh_4',['mcu_control.h',['../mcu__control_8h.html',1,'']]],
   ['mem_5',['mem',['../structSRAM.html#a90240eb36b848b62107e5625dfa5336a',1,'SRAM']]],
