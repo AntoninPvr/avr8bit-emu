@@ -142,6 +142,17 @@ void update_sreg_arithm(struct CORE *core, uint8_t Rd, uint8_t Rr, uint8_t resul
 void update_sreg_logic(struct CORE *core, uint8_t result);
 
 /**
+ * @brief Updates the Status Register (SREG) for 16-bit arithmetic operations.
+ *
+ * This function updates the SREG based on the result of a 16-bit arithmetic operation.
+ *
+ * @param core Pointer to the CORE structure.
+ * @param Rd The destination register value.
+ * @param result The result of the 16-bit arithmetic operation.
+ */
+void udpate_sreg_arithm_16bit(struct CORE *core, uint16_t Rd, uint16_t result);
+
+/**
  * @brief Update the Carry flag (C) in the status register.
  * 
  * @param core Pointer to the CORE structure.

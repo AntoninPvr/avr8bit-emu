@@ -12,6 +12,7 @@ var sreg__utils_8c =
     [ "sreg_V_compute_bool", "sreg__utils_8c.html#a09a5986c65df7bba62956905b0175560", null ],
     [ "sreg_Z_compute", "sreg__utils_8c.html#a2015d6f46331be03c702c54efb0fa236", null ],
     [ "sreg_Z_compute_bool", "sreg__utils_8c.html#a9512b562af3eb041bd28956f004645db", null ],
+    [ "udpate_sreg_arithm_16bit", "sreg__utils_8c.html#a8a10a1c8989a0b62fb2e6f3dc4a12d3b", null ],
     [ "update_sreg_arithm", "sreg__utils_8c.html#a4008a0b5aa6c6c395f9c508e6a85dfa5", null ],
     [ "update_sreg_C", "sreg__utils_8c.html#aebcd4c16a776b76e8155f372fba821cd", null ],
     [ "update_sreg_H", "sreg__utils_8c.html#a45eeec74d16900b4016c5520b2c964c1", null ],

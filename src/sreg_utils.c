@@ -64,6 +64,14 @@ void update_sreg_logic(struct CORE *core, uint8_t result) {
     core->sreg.S = sreg_S_compute(core->sreg.N, core->sreg.V);
 }
 
+void udpate_sreg_arithm_16bit(struct CORE *core, uint16_t Rd, uint16_t result) {
+    core->sreg.C = (!(Rd>>15) & (result>>15));
+    core->sreg.Z = result == 0 ? 1 : 0;
+    core->sreg.N = result >> 15;
+    core->sreg.V = (!(Rd>>15) & (result>>15));
+    core->sreg.S = sreg_S_compute(core->sreg.N, core->sreg.V);
+}
+
 void update_sreg_C(struct CORE *core, bool state) {
     core->sreg.C = state;
 }

@@ -148,6 +148,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a80a6b63f52d2cae45fba39adf1820bb8" id="r_a80a6b63f52d2cae45fba39adf1820bb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sreg__utils_8c.html#a80a6b63f52d2cae45fba39adf1820bb8">update_sreg_logic</a> (struct <a class="el" href="structCORE.html">CORE</a> *core, uint8_t result)</td></tr>
 <tr class="memdesc:a80a6b63f52d2cae45fba39adf1820bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the Status Register (<a class="el" href="unionSREG.html" title="Status Register.">SREG</a>) for logical operations.  <br /></td></tr>
 <tr class="separator:a80a6b63f52d2cae45fba39adf1820bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a10a1c8989a0b62fb2e6f3dc4a12d3b" id="r_a8a10a1c8989a0b62fb2e6f3dc4a12d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sreg__utils_8c.html#a8a10a1c8989a0b62fb2e6f3dc4a12d3b">udpate_sreg_arithm_16bit</a> (struct <a class="el" href="structCORE.html">CORE</a> *core, uint16_t Rd, uint16_t result)</td></tr>
+<tr class="memdesc:a8a10a1c8989a0b62fb2e6f3dc4a12d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the Status Register (<a class="el" href="unionSREG.html" title="Status Register.">SREG</a>) for 16-bit arithmetic operations.  <br /></td></tr>
+<tr class="separator:a8a10a1c8989a0b62fb2e6f3dc4a12d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebcd4c16a776b76e8155f372fba821cd" id="r_aebcd4c16a776b76e8155f372fba821cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sreg__utils_8c.html#aebcd4c16a776b76e8155f372fba821cd">update_sreg_C</a> (struct <a class="el" href="structCORE.html">CORE</a> *core, bool state)</td></tr>
 <tr class="memdesc:aebcd4c16a776b76e8155f372fba821cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the Carry flag (C) in the status register.  <br /></td></tr>
 <tr class="separator:aebcd4c16a776b76e8155f372fba821cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -457,7 +460,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> (N ^ V ? 16 : 0);</div>
 <div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sreg__utils_8c_source.html#l00051">update_sreg_arithm()</a>, and <a class="el" href="sreg__utils_8c_source.html#l00060">update_sreg_logic()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sreg__utils_8c_source.html#l00067">udpate_sreg_arithm_16bit()</a>, <a class="el" href="sreg__utils_8c_source.html#l00051">update_sreg_arithm()</a>, and <a class="el" href="sreg__utils_8c_source.html#l00060">update_sreg_logic()</a>.</p>
 
 </div>
 </div>
@@ -676,6 +679,71 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a10a1c8989a0b62fb2e6f3dc4a12d3b" name="a8a10a1c8989a0b62fb2e6f3dc4a12d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a10a1c8989a0b62fb2e6f3dc4a12d3b">&#9670;&#160;</a></span>udpate_sreg_arithm_16bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udpate_sreg_arithm_16bit </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structCORE.html">CORE</a> *&#160;</td>
+          <td class="paramname"><em>core</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the Status Register (<a class="el" href="unionSREG.html" title="Status Register.">SREG</a>) for 16-bit arithmetic operations. </p>
+<p>This function updates the <a class="el" href="unionSREG.html" title="Status Register.">SREG</a> based on the result of a 16-bit arithmetic operation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The destination register value. </td></tr>
+    <tr><td class="paramname">result</td><td>The result of the 16-bit arithmetic operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00067">67</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                               {</div>
+<div class="line"><span class="lineno">   68</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a2d8be24e3c4d2b481ee27f18248b4a78">C</a> = (!(Rd&gt;&gt;15) &amp; (result&gt;&gt;15));</div>
+<div class="line"><span class="lineno">   69</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#acc737c8c4069d90e5a1a7d40bc9d3ff5">Z</a> = result == 0 ? 1 : 0;</div>
+<div class="line"><span class="lineno">   70</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">N</a> = result &gt;&gt; 15;</div>
+<div class="line"><span class="lineno">   71</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">V</a> = (!(Rd&gt;&gt;15) &amp; (result&gt;&gt;15));</div>
+<div class="line"><span class="lineno">   72</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#adf5d187c5144a174ff71f7ffa166183f">S</a> = <a class="code hl_function" href="sreg__utils_8c.html#ab70ffe46fbddea5daa04325d62f8b62b">sreg_S_compute</a>(core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">N</a>, core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">V</a>);</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+<div class="ttc" id="asreg__utils_8c_html_ab70ffe46fbddea5daa04325d62f8b62b"><div class="ttname"><a href="sreg__utils_8c.html#ab70ffe46fbddea5daa04325d62f8b62b">sreg_S_compute</a></div><div class="ttdeci">uint8_t sreg_S_compute(bool N, bool V)</div><div class="ttdoc">Computes the S flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00043">sreg_utils.c:43</a></div></div>
+<div class="ttc" id="astructCORE_html_a963d459527ab0ee9d0d136aec3cf451b"><div class="ttname"><a href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">CORE::sreg</a></div><div class="ttdeci">union SREG sreg</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00071">core.h:71</a></div></div>
+<div class="ttc" id="aunionSREG_html_a19b4f3b833a433a4d1295605eb270236"><div class="ttname"><a href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">SREG::N</a></div><div class="ttdeci">bool N</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00015">core.h:15</a></div></div>
+<div class="ttc" id="aunionSREG_html_a2d8be24e3c4d2b481ee27f18248b4a78"><div class="ttname"><a href="unionSREG.html#a2d8be24e3c4d2b481ee27f18248b4a78">SREG::C</a></div><div class="ttdeci">bool C</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00013">core.h:13</a></div></div>
+<div class="ttc" id="aunionSREG_html_a65266291db7ac25c4224bc3db2e31313"><div class="ttname"><a href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">SREG::V</a></div><div class="ttdeci">bool V</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00016">core.h:16</a></div></div>
+<div class="ttc" id="aunionSREG_html_acc737c8c4069d90e5a1a7d40bc9d3ff5"><div class="ttname"><a href="unionSREG.html#acc737c8c4069d90e5a1a7d40bc9d3ff5">SREG::Z</a></div><div class="ttdeci">bool Z</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00014">core.h:14</a></div></div>
+<div class="ttc" id="aunionSREG_html_adf5d187c5144a174ff71f7ffa166183f"><div class="ttname"><a href="unionSREG.html#adf5d187c5144a174ff71f7ffa166183f">SREG::S</a></div><div class="ttdeci">bool S</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00017">core.h:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="core_8h_source.html#l00013">SREG::C</a>, <a class="el" href="core_8h_source.html#l00015">SREG::N</a>, <a class="el" href="core_8h_source.html#l00017">SREG::S</a>, <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, <a class="el" href="sreg__utils_8c_source.html#l00043">sreg_S_compute()</a>, <a class="el" href="core_8h_source.html#l00016">SREG::V</a>, and <a class="el" href="core_8h_source.html#l00014">SREG::Z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00035">adiw()</a>, and <a class="el" href="arithm__logic_8c_source.html#l00116">sbiw()</a>.</p>
+
+</div>
+</div>
 <a id="a4008a0b5aa6c6c395f9c508e6a85dfa5" name="a4008a0b5aa6c6c395f9c508e6a85dfa5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4008a0b5aa6c6c395f9c508e6a85dfa5">&#9670;&#160;</a></span>update_sreg_arithm()</h2>
 
@@ -738,20 +806,13 @@ Functions</h2></td></tr>
 <div class="ttc" id="asreg__utils_8c_html_a2015d6f46331be03c702c54efb0fa236"><div class="ttname"><a href="sreg__utils_8c.html#a2015d6f46331be03c702c54efb0fa236">sreg_Z_compute</a></div><div class="ttdeci">uint8_t sreg_Z_compute(uint8_t result)</div><div class="ttdoc">Computes the Z flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00031">sreg_utils.c:31</a></div></div>
 <div class="ttc" id="asreg__utils_8c_html_a969a2a5ba8a41455df15449f4eda2f0a"><div class="ttname"><a href="sreg__utils_8c.html#a969a2a5ba8a41455df15449f4eda2f0a">sreg_V_compute</a></div><div class="ttdeci">uint8_t sreg_V_compute(uint8_t Rd, uint8_t Rr, uint8_t result)</div><div class="ttdoc">Computes the V flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00039">sreg_utils.c:39</a></div></div>
 <div class="ttc" id="asreg__utils_8c_html_aa21ec4f5d908ce38a0cfb628145f12c0"><div class="ttname"><a href="sreg__utils_8c.html#aa21ec4f5d908ce38a0cfb628145f12c0">sreg_H_compute</a></div><div class="ttdeci">uint8_t sreg_H_compute(uint8_t Rd, uint8_t Rr)</div><div class="ttdoc">Computes the H flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00047">sreg_utils.c:47</a></div></div>
-<div class="ttc" id="asreg__utils_8c_html_ab70ffe46fbddea5daa04325d62f8b62b"><div class="ttname"><a href="sreg__utils_8c.html#ab70ffe46fbddea5daa04325d62f8b62b">sreg_S_compute</a></div><div class="ttdeci">uint8_t sreg_S_compute(bool N, bool V)</div><div class="ttdoc">Computes the S flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00043">sreg_utils.c:43</a></div></div>
 <div class="ttc" id="asreg__utils_8c_html_ae3ac0cfe7709bfe5a345fc7827a57a3a"><div class="ttname"><a href="sreg__utils_8c.html#ae3ac0cfe7709bfe5a345fc7827a57a3a">sreg_N_compute</a></div><div class="ttdeci">uint8_t sreg_N_compute(uint8_t result)</div><div class="ttdoc">Computes the N flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00035">sreg_utils.c:35</a></div></div>
 <div class="ttc" id="asreg__utils_8c_html_af980185dfcd2473a80b5a3287259fb51"><div class="ttname"><a href="sreg__utils_8c.html#af980185dfcd2473a80b5a3287259fb51">sreg_C_compute</a></div><div class="ttdeci">uint8_t sreg_C_compute(uint8_t Rd, uint8_t Rr)</div><div class="ttdoc">Computes the C flag as an 8-bit value.</div><div class="ttdef"><b>Definition</b> <a href="sreg__utils_8c_source.html#l00027">sreg_utils.c:27</a></div></div>
-<div class="ttc" id="astructCORE_html_a963d459527ab0ee9d0d136aec3cf451b"><div class="ttname"><a href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">CORE::sreg</a></div><div class="ttdeci">union SREG sreg</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00071">core.h:71</a></div></div>
-<div class="ttc" id="aunionSREG_html_a19b4f3b833a433a4d1295605eb270236"><div class="ttname"><a href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">SREG::N</a></div><div class="ttdeci">bool N</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00015">core.h:15</a></div></div>
-<div class="ttc" id="aunionSREG_html_a2d8be24e3c4d2b481ee27f18248b4a78"><div class="ttname"><a href="unionSREG.html#a2d8be24e3c4d2b481ee27f18248b4a78">SREG::C</a></div><div class="ttdeci">bool C</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00013">core.h:13</a></div></div>
-<div class="ttc" id="aunionSREG_html_a65266291db7ac25c4224bc3db2e31313"><div class="ttname"><a href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">SREG::V</a></div><div class="ttdeci">bool V</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00016">core.h:16</a></div></div>
-<div class="ttc" id="aunionSREG_html_acc737c8c4069d90e5a1a7d40bc9d3ff5"><div class="ttname"><a href="unionSREG.html#acc737c8c4069d90e5a1a7d40bc9d3ff5">SREG::Z</a></div><div class="ttdeci">bool Z</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00014">core.h:14</a></div></div>
 <div class="ttc" id="aunionSREG_html_ada622fbbb54ea500a5aa984dd4267ec0"><div class="ttname"><a href="unionSREG.html#ada622fbbb54ea500a5aa984dd4267ec0">SREG::H</a></div><div class="ttdeci">bool H</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00018">core.h:18</a></div></div>
-<div class="ttc" id="aunionSREG_html_adf5d187c5144a174ff71f7ffa166183f"><div class="ttname"><a href="unionSREG.html#adf5d187c5144a174ff71f7ffa166183f">SREG::S</a></div><div class="ttdeci">bool S</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00017">core.h:17</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00013">SREG::C</a>, <a class="el" href="core_8h_source.html#l00018">SREG::H</a>, <a class="el" href="core_8h_source.html#l00015">SREG::N</a>, <a class="el" href="core_8h_source.html#l00017">SREG::S</a>, <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, <a class="el" href="sreg__utils_8c_source.html#l00027">sreg_C_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00047">sreg_H_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00035">sreg_N_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00043">sreg_S_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00039">sreg_V_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00031">sreg_Z_compute()</a>, <a class="el" href="core_8h_source.html#l00016">SREG::V</a>, and <a class="el" href="core_8h_source.html#l00014">SREG::Z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00019">adc()</a>, <a class="el" href="arithm__logic_8c_source.html#l00003">add()</a>, <a class="el" href="branch_8c_source.html#l00120">cp()</a>, <a class="el" href="branch_8c_source.html#l00132">cpc()</a>, <a class="el" href="branch_8c_source.html#l00144">cpi()</a>, <a class="el" href="arithm__logic_8c_source.html#l00080">sbc()</a>, <a class="el" href="arithm__logic_8c_source.html#l00096">sbci()</a>, <a class="el" href="arithm__logic_8c_source.html#l00048">sub()</a>, and <a class="el" href="arithm__logic_8c_source.html#l00064">subi()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00019">adc()</a>, <a class="el" href="arithm__logic_8c_source.html#l00003">add()</a>, <a class="el" href="branch_8c_source.html#l00120">cp()</a>, <a class="el" href="branch_8c_source.html#l00132">cpc()</a>, <a class="el" href="branch_8c_source.html#l00144">cpi()</a>, <a class="el" href="arithm__logic_8c_source.html#l00084">sbc()</a>, <a class="el" href="arithm__logic_8c_source.html#l00100">sbci()</a>, <a class="el" href="arithm__logic_8c_source.html#l00052">sub()</a>, and <a class="el" href="arithm__logic_8c_source.html#l00068">subi()</a>.</p>
 
 </div>
 </div>
@@ -790,14 +851,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00067">67</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                  {</div>
-<div class="line"><span class="lineno">   68</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a2d8be24e3c4d2b481ee27f18248b4a78">C</a> = state;</div>
-<div class="line"><span class="lineno">   69</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00075">75</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                  {</div>
+<div class="line"><span class="lineno">   76</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a2d8be24e3c4d2b481ee27f18248b4a78">C</a> = state;</div>
+<div class="line"><span class="lineno">   77</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00013">SREG::C</a>, and <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00195">com()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00203">com()</a>.</p>
 
 </div>
 </div>
@@ -836,10 +897,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00087">87</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                  {</div>
-<div class="line"><span class="lineno">   88</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#ada622fbbb54ea500a5aa984dd4267ec0">H</a> = state;</div>
-<div class="line"><span class="lineno">   89</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00095">95</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                  {</div>
+<div class="line"><span class="lineno">   96</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#ada622fbbb54ea500a5aa984dd4267ec0">H</a> = state;</div>
+<div class="line"><span class="lineno">   97</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00018">SREG::H</a>, and <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>.</p>
 
@@ -882,10 +943,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00095">95</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                  {</div>
-<div class="line"><span class="lineno">   96</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#ad02a7edddde0721ab50c453ce5e2ae75">I</a> = state;</div>
-<div class="line"><span class="lineno">   97</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00103">103</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                  {</div>
+<div class="line"><span class="lineno">  104</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#ad02a7edddde0721ab50c453ce5e2ae75">I</a> = state;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 <div class="ttc" id="aunionSREG_html_ad02a7edddde0721ab50c453ce5e2ae75"><div class="ttname"><a href="unionSREG.html#ad02a7edddde0721ab50c453ce5e2ae75">SREG::I</a></div><div class="ttdeci">bool I</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00020">core.h:20</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00020">SREG::I</a>, and <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>.</p>
@@ -940,7 +1001,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00015">SREG::N</a>, <a class="el" href="core_8h_source.html#l00017">SREG::S</a>, <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, <a class="el" href="sreg__utils_8c_source.html#l00035">sreg_N_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00043">sreg_S_compute()</a>, <a class="el" href="sreg__utils_8c_source.html#l00031">sreg_Z_compute()</a>, <a class="el" href="core_8h_source.html#l00016">SREG::V</a>, and <a class="el" href="core_8h_source.html#l00014">SREG::Z</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00125">and()</a>, <a class="el" href="arithm__logic_8c_source.html#l00139">andi()</a>, <a class="el" href="arithm__logic_8c_source.html#l00195">com()</a>, <a class="el" href="arithm__logic_8c_source.html#l00181">eor()</a>, <a class="el" href="arithm__logic_8c_source.html#l00153">or()</a>, and <a class="el" href="arithm__logic_8c_source.html#l00167">ori()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="arithm__logic_8c_source.html#l00133">and()</a>, <a class="el" href="arithm__logic_8c_source.html#l00147">andi()</a>, <a class="el" href="arithm__logic_8c_source.html#l00203">com()</a>, <a class="el" href="arithm__logic_8c_source.html#l00189">eor()</a>, <a class="el" href="arithm__logic_8c_source.html#l00161">or()</a>, and <a class="el" href="arithm__logic_8c_source.html#l00175">ori()</a>.</p>
 
 </div>
 </div>
@@ -979,10 +1040,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00075">75</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                  {</div>
-<div class="line"><span class="lineno">   76</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">N</a> = state;</div>
-<div class="line"><span class="lineno">   77</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00083">83</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                  {</div>
+<div class="line"><span class="lineno">   84</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a19b4f3b833a433a4d1295605eb270236">N</a> = state;</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00015">SREG::N</a>, and <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>.</p>
 
@@ -1025,10 +1086,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00083">83</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                  {</div>
-<div class="line"><span class="lineno">   84</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#adf5d187c5144a174ff71f7ffa166183f">S</a> = state;</div>
-<div class="line"><span class="lineno">   85</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00091">91</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                  {</div>
+<div class="line"><span class="lineno">   92</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#adf5d187c5144a174ff71f7ffa166183f">S</a> = state;</div>
+<div class="line"><span class="lineno">   93</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00017">SREG::S</a>, and <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>.</p>
 
@@ -1071,10 +1132,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00091">91</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   91</span>                                                  {</div>
-<div class="line"><span class="lineno">   92</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#af62d380e6b8ff774db744080f3b35e19">T</a> = state;</div>
-<div class="line"><span class="lineno">   93</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00099">99</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                  {</div>
+<div class="line"><span class="lineno">  100</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#af62d380e6b8ff774db744080f3b35e19">T</a> = state;</div>
+<div class="line"><span class="lineno">  101</span>}</div>
 <div class="ttc" id="aunionSREG_html_af62d380e6b8ff774db744080f3b35e19"><div class="ttname"><a href="unionSREG.html#af62d380e6b8ff774db744080f3b35e19">SREG::T</a></div><div class="ttdeci">bool T</div><div class="ttdef"><b>Definition</b> <a href="core_8h_source.html#l00019">core.h:19</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, and <a class="el" href="core_8h_source.html#l00019">SREG::T</a>.</p>
@@ -1116,10 +1177,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00079">79</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                  {</div>
-<div class="line"><span class="lineno">   80</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">V</a> = state;</div>
-<div class="line"><span class="lineno">   81</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00087">87</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                  {</div>
+<div class="line"><span class="lineno">   88</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#a65266291db7ac25c4224bc3db2e31313">V</a> = state;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, and <a class="el" href="core_8h_source.html#l00016">SREG::V</a>.</p>
 
@@ -1162,10 +1223,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00071">71</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                  {</div>
-<div class="line"><span class="lineno">   72</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#acc737c8c4069d90e5a1a7d40bc9d3ff5">Z</a> = state;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definition at line <a class="el" href="sreg__utils_8c_source.html#l00079">79</a> of file <a class="el" href="sreg__utils_8c_source.html">sreg_utils.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                  {</div>
+<div class="line"><span class="lineno">   80</span>    core-&gt;<a class="code hl_variable" href="structCORE.html#a963d459527ab0ee9d0d136aec3cf451b">sreg</a>.<a class="code hl_variable" href="unionSREG.html#acc737c8c4069d90e5a1a7d40bc9d3ff5">Z</a> = state;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="core_8h_source.html#l00071">CORE::sreg</a>, and <a class="el" href="core_8h_source.html#l00014">SREG::Z</a>.</p>
 

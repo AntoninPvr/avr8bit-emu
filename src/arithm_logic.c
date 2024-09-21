@@ -42,6 +42,10 @@ void adiw(uint8_t d, uint8_t K, struct CORE *core) {
     uint16_t result = Rd + K;
     core->gp.R[d] = result & 0xFF;
     core->gp.R[d + 1] = (result >> 8) & 0xFF;
+
+    // Update SREG
+    udpate_sreg_arithm_16bit(core, Rd, result);
+
     inc_pc(core);
 }
 
@@ -119,6 +123,10 @@ void sbiw(uint8_t d, uint8_t K, struct CORE *core) {
     uint16_t result = Rd - K;
     core->gp.R[d] = result & 0xFF;
     core->gp.R[d + 1] = (result >> 8) & 0xFF;
+
+    // Update SREG
+    udpate_sreg_arithm_16bit(core, Rd, result);
+
     inc_pc(core);
 }
 
