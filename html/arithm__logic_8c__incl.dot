@@ -16,7 +16,7 @@ digraph "src/arithm_logic.c"
   Node5 -> Node3 [id="edge5_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node5 -> Node4 [id="edge6_Node000005_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node2 -> Node6 [id="edge7_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="sreg_utils.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sreg__utils_8h.html",tooltip=" "];
+  Node6 [id="Node000006",label="sreg_utils.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$sreg__utils_8h.html",tooltip="Functions for manipulating the Status Register (SREG)"];
   Node6 -> Node3 [id="edge8_Node000006_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node6 -> Node4 [id="edge9_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];
   Node6 -> Node5 [id="edge10_Node000006_Node000005",color="steelblue1",style="solid",tooltip=" "];
