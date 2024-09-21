@@ -98,13 +98,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a32fc67a9f7544ff0443bd19dbd977237" id="r_a32fc67a9f7544ff0443bd19dbd977237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcu__control_8h.html#a32fc67a9f7544ff0443bd19dbd977237">break_point</a> (struct <a class="el" href="structCORE.html">CORE</a> *core)</td></tr>
-<tr class="memdesc:a32fc67a9f7544ff0443bd19dbd977237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breakpoint.  <br /></td></tr>
+<tr class="memdesc:a32fc67a9f7544ff0443bd19dbd977237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a breakpoint in the MCU emulator.  <br /></td></tr>
 <tr class="separator:a32fc67a9f7544ff0443bd19dbd977237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee97c453ba82b284a0e2d4ba8d9dbff1" id="r_aee97c453ba82b284a0e2d4ba8d9dbff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcu__control_8h.html#aee97c453ba82b284a0e2d4ba8d9dbff1">nop</a> (struct <a class="el" href="structCORE.html">CORE</a> *core)</td></tr>
+<tr class="memdesc:aee97c453ba82b284a0e2d4ba8d9dbff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a no-operation instruction.  <br /></td></tr>
 <tr class="separator:aee97c453ba82b284a0e2d4ba8d9dbff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35d8d4e13032edbcd79da54500c97c1a" id="r_a35d8d4e13032edbcd79da54500c97c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcu__control_8h.html#a35d8d4e13032edbcd79da54500c97c1a">sleep</a> (struct <a class="el" href="structCORE.html">CORE</a> *core)</td></tr>
+<tr class="memdesc:a35d8d4e13032edbcd79da54500c97c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts the MCU into sleep mode.  <br /></td></tr>
 <tr class="separator:a35d8d4e13032edbcd79da54500c97c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86e3f7d6a40ddef673121328941fda02" id="r_a86e3f7d6a40ddef673121328941fda02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mcu__control_8h.html#a86e3f7d6a40ddef673121328941fda02">wdr</a> (struct <a class="el" href="structCORE.html">CORE</a> *core)</td></tr>
+<tr class="memdesc:a86e3f7d6a40ddef673121328941fda02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the watchdog timer.  <br /></td></tr>
 <tr class="separator:a86e3f7d6a40ddef673121328941fda02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -124,7 +127,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Breakpoint. </p>
+<p>Triggers a breakpoint in the MCU emulator. </p>
+<p>This function is used to simulate a breakpoint in the MCU emulator, halting execution for debugging purposes.</p>
+<p>Currently, this function does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure representing the MCU state.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Triggers a breakpoint in the MCU emulator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure </td></tr>
@@ -155,6 +167,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Executes a no-operation instruction. </p>
+<p>This function simulates the execution of a NOP (no operation) instruction, which does nothing and simply advances the program counter.</p>
+<p>Currently, this function does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure representing the MCU state. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="mcu__control_8c_source.html#l00011">11</a> of file <a class="el" href="mcu__control_8c_source.html">mcu_control.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   11</span>                            {</div>
 <div class="line"><span class="lineno">   12</span>    <span class="comment">// No operation</span></div>
@@ -179,6 +201,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Puts the MCU into sleep mode. </p>
+<p>This function simulates putting the MCU into a low-power sleep mode, reducing power consumption until an interrupt occurs.</p>
+<p>Currently, this function does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure representing the MCU state. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="mcu__control_8c_source.html#l00016">16</a> of file <a class="el" href="mcu__control_8c_source.html">mcu_control.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>                              {</div>
 <div class="line"><span class="lineno">   17</span>    <span class="comment">// Sleep</span></div>
@@ -202,6 +234,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resets the watchdog timer. </p>
+<p>This function simulates resetting the watchdog timer, preventing the MCU from resetting due to a watchdog timeout.</p>
+<p>Currently, this function does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td>Pointer to the <a class="el" href="structCORE.html" title="Core structure containing general purpose registers, program counter, stack pointer,...">CORE</a> structure representing the MCU state. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="mcu__control_8c_source.html#l00021">21</a> of file <a class="el" href="mcu__control_8c_source.html">mcu_control.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>                            {</div>

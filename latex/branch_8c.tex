@@ -7,75 +7,75 @@ Include dependency graph for branch.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{branch_8c_ad621ae200e228e9c55e3f933215688f2}{rjmp}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Perform a relative jump. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_aef8672188850c14893dd091072920334}{ijmp}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Perform an indirect jump. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a61598574c5073ef36dcff6526c66c248}{jmp}} (uint32\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Perform an absolute jump. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_af3395e0ddd007d8995f79fe049e0e4a8}{rcall}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}sram)
-\item 
+\begin{DoxyCompactList}\small\item\em Perform a relative call to a subroutine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_abd8b914672a05ab8cd6492c4df5c6177}{icall}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}sram)
-\item 
+\begin{DoxyCompactList}\small\item\em Perform an indirect call to a subroutine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a17c97b4413d2734fcb5de6d5769e7024}{ret}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}sram)
-\item 
+\begin{DoxyCompactList}\small\item\em Return from a subroutine. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_abb44abd468573f7f515d22303d889016}{reti}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}sram)
-\item 
+\begin{DoxyCompactList}\small\item\em Return from an interrupt. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_abdcddfd01cb87f08e743e068eddfb95a}{cpse}} (uint8\+\_\+t d, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare and skip if equal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_abc437a2ef00cfd0a7ba6736aacb017e9}{cp}} (uint8\+\_\+t d, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two registers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_aae872ca4af8fa2153f0c3831484d5e4b}{cpc}} (uint8\+\_\+t d, uint8\+\_\+t r, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two registers with carry. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ac0ce5238c414abd69175b98df4d604ad}{cpi}} (uint8\+\_\+t d, uint8\+\_\+t K, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare register with an immediate value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ad41300ee1300928c75ff028119e118c8}{sbrc}} (uint8\+\_\+t r, uint8\+\_\+t b, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Skip if bit in register is cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ae16da29183cc1ab7ded7743d1bd9a4ec}{sbrs}} (uint8\+\_\+t r, uint8\+\_\+t b, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Skip if bit in register is set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ae7c8a05b9129d248c4b218acc93ba50e}{sbic}} (uint8\+\_\+t A, uint8\+\_\+t b, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
-\item 
+\begin{DoxyCompactList}\small\item\em Skip if bit in I/O register is cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a05782ff1ce3f73f44d26cf0fd4a3ce97}{sbis}} (uint8\+\_\+t A, uint8\+\_\+t b, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core, union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}data\+\_\+space)
-\item 
+\begin{DoxyCompactList}\small\item\em Skip if bit in I/O register is set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a0f1d1bcda5e2614fd6b87ae2ba0a37c5}{brbs}} (uint8\+\_\+t s, uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if status flag is set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a2aee3ae3da535a3e8b649cdf7b0d22b9}{brbc}} (uint8\+\_\+t s, uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if status flag is cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a41bc2f1323448f21a65bd443900eb053}{breq}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if equal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a89366176906aa4da5590ede625aff38d}{brne}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if not equal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ab4d7ae28f4db877e548908f12dfe8d3a}{brcs}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if carry set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_aa1433c44eb66bf0aa3c503350953bab9}{brcc}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if carry cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a02b5d46d8d375b07502971c6c0ed1002}{brsh}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if same or higher. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a80b3fca4392a354f53df6b51f275e633}{brlo}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if lower. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_aef193ebe29fdc4aa44ee439951c5fa14}{brmi}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if minus. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_ac64c77af214b506f5238075197df1797}{brpl}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if plus. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a65bccd1aa4604270872a4b993e02befc}{brge}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if greater or equal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a535bb805ff909037faab609492882264}{brlt}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if less than. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_acc86fb62e357132ca9b33a319cb10f37}{brhs}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if half carry set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a61570d0d94e278fc366aa3d57127f404}{brhc}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if half carry cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a4e27568852fac0bb4b9bdfa632333d00}{brts}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if T flag set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a739af0e71605cdc482388ebb36676d1f}{brtc}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if T flag cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a5cc826d204ab03e3c1410d4ca6cfe5b9}{brvs}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if overflow set. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a1fb2a334e83b4b8172b442c4fd680865}{brvc}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if overflow cleared. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a59a153710e3d7b9fa2ed15e5218a6abf}{brie}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Branch if interrupts enabled. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{branch_8c_a711a839de0b8436f53c4f022ea3eaefe}{brid}} (uint8\+\_\+t k, struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Branch if interrupts disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -85,6 +85,19 @@ void \mbox{\hyperlink{branch_8c_a711a839de0b8436f53c4f022ea3eaefe}{brid}} (uint8
 \doxysubsubsection{\texorpdfstring{brbc()}{brbc()}}
 {\footnotesize\ttfamily void brbc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{s,  }\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if status flag is cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Status flag. \\
+\hline
+{\em k} & Relative address. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00247}{247}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -121,6 +134,19 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 
 
 
+Branch if status flag is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Status flag. \\
+\hline
+{\em k} & Relative address. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00230}{230}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -153,6 +179,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 \doxysubsubsection{\texorpdfstring{brcc()}{brcc()}}
 {\footnotesize\ttfamily void brcc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if carry cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00315}{315}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -189,6 +226,17 @@ References \mbox{\hyperlink{core_8h_source_l00013}{SREG\+::C}}, \mbox{\hyperlink
 
 
 
+Branch if carry set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00298}{298}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -221,6 +269,17 @@ References \mbox{\hyperlink{core_8h_source_l00013}{SREG\+::C}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{breq()}{breq()}}
 {\footnotesize\ttfamily void breq (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00264}{264}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -257,6 +316,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 
 
 
+Branch if greater or equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00400}{400}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -289,6 +359,17 @@ References \mbox{\hyperlink{core_8h_source_l00015}{SREG\+::N}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{brhc()}{brhc()}}
 {\footnotesize\ttfamily void brhc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if half carry cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00451}{451}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -325,6 +406,17 @@ References \mbox{\hyperlink{core_8h_source_l00018}{SREG\+::H}}, \mbox{\hyperlink
 
 
 
+Branch if half carry set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00434}{434}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -357,6 +449,17 @@ References \mbox{\hyperlink{core_8h_source_l00018}{SREG\+::H}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{brid()}{brid()}}
 {\footnotesize\ttfamily void brid (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if interrupts disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00553}{553}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -393,6 +496,17 @@ References \mbox{\hyperlink{core_8h_source_l00020}{SREG\+::I}}, \mbox{\hyperlink
 
 
 
+Branch if interrupts enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00536}{536}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -425,6 +539,17 @@ References \mbox{\hyperlink{core_8h_source_l00020}{SREG\+::I}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{brlo()}{brlo()}}
 {\footnotesize\ttfamily void brlo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if lower. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00349}{349}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -461,6 +586,17 @@ References \mbox{\hyperlink{core_8h_source_l00013}{SREG\+::C}}, \mbox{\hyperlink
 
 
 
+Branch if less than. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00417}{417}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -493,6 +629,17 @@ References \mbox{\hyperlink{core_8h_source_l00015}{SREG\+::N}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{brmi()}{brmi()}}
 {\footnotesize\ttfamily void brmi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if minus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00366}{366}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -529,6 +676,17 @@ References \mbox{\hyperlink{core_8h_source_l00015}{SREG\+::N}}, \mbox{\hyperlink
 
 
 
+Branch if not equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00281}{281}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -561,6 +719,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 \doxysubsubsection{\texorpdfstring{brpl()}{brpl()}}
 {\footnotesize\ttfamily void brpl (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if plus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00383}{383}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -597,6 +766,17 @@ References \mbox{\hyperlink{core_8h_source_l00015}{SREG\+::N}}, \mbox{\hyperlink
 
 
 
+Branch if same or higher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00332}{332}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -629,6 +809,17 @@ References \mbox{\hyperlink{core_8h_source_l00013}{SREG\+::C}}, \mbox{\hyperlink
 \doxysubsubsection{\texorpdfstring{brtc()}{brtc()}}
 {\footnotesize\ttfamily void brtc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if T flag cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00485}{485}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -665,6 +856,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 
 
 
+Branch if T flag set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00468}{468}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -697,6 +899,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 \doxysubsubsection{\texorpdfstring{brvc()}{brvc()}}
 {\footnotesize\ttfamily void brvc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Branch if overflow cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00519}{519}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -733,6 +946,17 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 
 
 
+Branch if overflow set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the branch. \\
+\hline
+{\em core} & Pointer to the core structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00502}{502}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -767,6 +991,19 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}, \mbox{\hyperl
 
 
 
+Compare two registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Destination register. \\
+\hline
+{\em r} & Source register. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00120}{120}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -794,6 +1031,19 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 \doxysubsubsection{\texorpdfstring{cpc()}{cpc()}}
 {\footnotesize\ttfamily void cpc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{r,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Compare two registers with carry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Destination register. \\
+\hline
+{\em r} & Source register. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00132}{132}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -825,6 +1075,19 @@ References \mbox{\hyperlink{core_8h_source_l00013}{SREG\+::C}}, \mbox{\hyperlink
 
 
 
+Compare register with an immediate value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Destination register. \\
+\hline
+{\em K} & Immediate value. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00144}{144}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -852,6 +1115,19 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 \doxysubsubsection{\texorpdfstring{cpse()}{cpse()}}
 {\footnotesize\ttfamily void cpse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{d,  }\item[{uint8\+\_\+t}]{r,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Compare and skip if equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The destination register. \\
+\hline
+{\em r} & The source register. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00102}{102}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -889,6 +1165,17 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 
 
 
+Perform an indirect call to a subroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em sram} & Pointer to the \doxylink{structSRAM}{SRAM} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00054}{54}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -921,6 +1208,15 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 
 
 
+Perform an indirect jump. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00015}{15}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -950,6 +1246,17 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 
 
 
+Perform an absolute jump. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The address to jump to. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00027}{27}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -977,6 +1284,19 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}.
 \doxysubsubsection{\texorpdfstring{rcall()}{rcall()}}
 {\footnotesize\ttfamily void rcall (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{k,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}}]{sram }\end{DoxyParamCaption})}
 
+
+
+Perform a relative call to a subroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the call. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em sram} & Pointer to the \doxylink{structSRAM}{SRAM} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00039}{39}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -1011,6 +1331,17 @@ References \mbox{\hyperlink{sram_8h_source_l00008}{SRAM\+::mem}}, \mbox{\hyperli
 
 
 
+Return from a subroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em sram} & Pointer to the \doxylink{structSRAM}{SRAM} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00073}{73}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -1040,6 +1371,17 @@ References \mbox{\hyperlink{sram_8h_source_l00008}{SRAM\+::mem}}, \mbox{\hyperli
 \doxysubsubsection{\texorpdfstring{reti()}{reti()}}
 {\footnotesize\ttfamily void reti (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{struct \mbox{\hyperlink{structSRAM}{SRAM}} \texorpdfstring{$\ast$}{*}}]{sram }\end{DoxyParamCaption})}
 
+
+
+Return from an interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em sram} & Pointer to the \doxylink{structSRAM}{SRAM} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00087}{87}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -1074,6 +1416,17 @@ References \mbox{\hyperlink{sram_8h_source_l00008}{SRAM\+::mem}}, \mbox{\hyperli
 
 
 
+Perform a relative jump. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The offset for the jump. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00003}{3}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -1101,6 +1454,21 @@ References \mbox{\hyperlink{core_8h_source_l00069}{CORE\+::\+PC}}.
 \doxysubsubsection{\texorpdfstring{sbic()}{sbic()}}
 {\footnotesize\ttfamily void sbic (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{A,  }\item[{uint8\+\_\+t}]{b,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core,  }\item[{union \mbox{\hyperlink{unionDATA__SPACE}{DATA\+\_\+\+SPACE}} \texorpdfstring{$\ast$}{*}}]{data\+\_\+space }\end{DoxyParamCaption})}
 
+
+
+Skip if bit in I/O register is cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & I/O register address. \\
+\hline
+{\em b} & Bit position. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em data\+\_\+space} & Pointer to the \doxylink{unionDATA__SPACE}{DATA\+\_\+\+SPACE} union. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00192}{192}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
@@ -1139,6 +1507,21 @@ References \mbox{\hyperlink{data__space_8h_source_l00017}{DATA\+\_\+\+SPACE\+::i
 
 
 
+Skip if bit in I/O register is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & I/O register address. \\
+\hline
+{\em b} & Bit position. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+{\em data\+\_\+space} & Pointer to the \doxylink{unionDATA__SPACE}{DATA\+\_\+\+SPACE} union. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00211}{211}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -1175,6 +1558,19 @@ References \mbox{\hyperlink{data__space_8h_source_l00017}{DATA\+\_\+\+SPACE\+::i
 
 
 
+Skip if bit in register is cleared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Register. \\
+\hline
+{\em b} & Bit position. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{branch_8c_source_l00156}{156}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.
 
 
@@ -1208,6 +1604,19 @@ References \mbox{\hyperlink{core_8h_source_l00068}{CORE\+::gp}}, \mbox{\hyperlin
 \doxysubsubsection{\texorpdfstring{sbrs()}{sbrs()}}
 {\footnotesize\ttfamily void sbrs (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{b,  }\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Skip if bit in register is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Register. \\
+\hline
+{\em b} & Bit position. \\
+\hline
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{branch_8c_source_l00174}{174}} of file \mbox{\hyperlink{branch_8c_source}{branch.\+c}}.

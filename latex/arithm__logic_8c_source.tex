@@ -4,401 +4,359 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arithm__logic_8h}{arithm\_logic.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00003}\mbox{\hyperlink{arithm__logic_8h_a1d3be71679a98c3d1aad8eca14968558}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1d3be71679a98c3d1aad8eca14968558}{add}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00014}00014\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00016}00016\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00014}\mbox{\hyperlink{arithm__logic_8h_a1d3be71679a98c3d1aad8eca14968558}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1d3be71679a98c3d1aad8eca14968558}{add}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00015}00015\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00018}00018\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00023}\mbox{\hyperlink{arithm__logic_8h_a0bd0c422c4c16e17ea199a03fac399f9}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a0bd0c422c4c16e17ea199a03fac399f9}{adc}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//\ Add\ with\ cary}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ +\ Rr\ +\ C}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00028}00028\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00031}00031\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ +\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00026}\mbox{\hyperlink{arithm__logic_8h_a0bd0c422c4c16e17ea199a03fac399f9}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a0bd0c422c4c16e17ea199a03fac399f9}{adc}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Add\ with\ cary}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ +\ Rr\ +\ C}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00031}00031\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00034}00034\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ +\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00039}\mbox{\hyperlink{arithm__logic_8h_ada7cdc357dceb7ab993fe094c30d6b1f}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_ada7cdc357dceb7ab993fe094c30d6b1f}{adiw}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Add\ immediate\ to\ word}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Rd:Rd+1\ <-\/\ Rd:Rd+1\ +\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00044}00044\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00047}00047\ \ \ \ \ uint16\_t\ Rd\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ (core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ <<\ 8);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00048}00048\ \ \ \ \ uint16\_t\ result\ =\ Rd\ +\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00049}00049\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00050}00050\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00052}00052\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00054}\mbox{\hyperlink{arithm__logic_8h_a16350986e80575af322c37339d66ce4d}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a16350986e80575af322c37339d66ce4d}{sub}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Subtract\ without\ cary}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ Rr}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00059}00059\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00062}00062\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00063}00063\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00068}00068\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00070}\mbox{\hyperlink{arithm__logic_8h_a1114a5182e70333a74e0b7b02046f6a0}{00070}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1114a5182e70333a74e0b7b02046f6a0}{subi}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00075}00075\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00076}00076\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00078}00078\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00081}00081\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ K,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00084}00084\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00086}\mbox{\hyperlink{arithm__logic_8h_aeb2c38edacf018c670939cd70e2f7927}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_aeb2c38edacf018c670939cd70e2f7927}{sbc}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Subtract\ with\ cary}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ Rr\ -\/\ C}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00090}00090\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00091}00091\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00094}00094\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00095}00095\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00097}00097\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00100}00100\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00102}\mbox{\hyperlink{arithm__logic_8h_a84e7919e95a7bfe2d145a3b614b365e8}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a84e7919e95a7bfe2d145a3b614b365e8}{sbci}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate\ with\ cary}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ K\ -\/\ C}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00107}00107\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00108}00108\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00110}00110\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ K\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00111}00111\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ K,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00116}00116\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00118}\mbox{\hyperlink{arithm__logic_8h_afc3aa14ada3cf45838610628d873322c}{00118}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_afc3aa14ada3cf45838610628d873322c}{sbiw}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate\ from\ word}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//\ Rd:Rd+1\ <-\/\ Rd:Rd+1\ -\/\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00122}00122\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00123}00123\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00124}00124\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00125}00125\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00126}00126\ \ \ \ \ uint16\_t\ Rd\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ (core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ <<\ 8);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00127}00127\ \ \ \ \ uint16\_t\ result\ =\ Rd\ -\/\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00128}00128\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00129}00129\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00130}00130\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00131}00131\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00132}00132\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00133}\mbox{\hyperlink{arithm__logic_8h_abec54cb51cf0049718ad804c52b5b352}{00133}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_abec54cb51cf0049718ad804c52b5b352}{and}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//\ Logical\ AND}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ Rr}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00137}00137\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00138}00138\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00042}\mbox{\hyperlink{arithm__logic_8h_ada7cdc357dceb7ab993fe094c30d6b1f}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_ada7cdc357dceb7ab993fe094c30d6b1f}{adiw}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ Add\ immediate\ to\ word}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Rd:Rd+1\ <-\/\ Rd:Rd+1\ +\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00048}00048\ \ \ \ \ uint16\_t\ Rd\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ (core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ <<\ 8);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00049}00049\ \ \ \ \ uint16\_t\ result\ =\ Rd\ +\ K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00050}00050\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00051}00051\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00055}\mbox{\hyperlink{arithm__logic_8h_a16350986e80575af322c37339d66ce4d}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a16350986e80575af322c37339d66ce4d}{sub}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Subtract\ without\ cary}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ Rr}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00060}00060\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00063}00063\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00071}\mbox{\hyperlink{arithm__logic_8h_a1114a5182e70333a74e0b7b02046f6a0}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1114a5182e70333a74e0b7b02046f6a0}{subi}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00076}00076\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00079}00079\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00081}00081\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ K,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00087}\mbox{\hyperlink{arithm__logic_8h_aeb2c38edacf018c670939cd70e2f7927}{00087}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_aeb2c38edacf018c670939cd70e2f7927}{sbc}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ Subtract\ with\ cary}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ Rr\ -\/\ C}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00092}00092\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00095}00095\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00098}00098\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r],\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00103}\mbox{\hyperlink{arithm__logic_8h_a84e7919e95a7bfe2d145a3b614b365e8}{00103}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a84e7919e95a7bfe2d145a3b614b365e8}{sbci}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate\ with\ cary}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ K\ -\/\ C}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00106}00106\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00108}00108\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00110}00110\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00111}00111\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ K\ -\/\ core-\/>\mbox{\hyperlink{structCORE_a963d459527ab0ee9d0d136aec3cf451b}{sreg}}.\mbox{\hyperlink{unionSREG_a2d8be24e3c4d2b481ee27f18248b4a78}{C}};}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00114}00114\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a4008a0b5aa6c6c395f9c508e6a85dfa5}{update\_sreg\_arithm}}(core,\ R\_tmp,\ K,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00119}\mbox{\hyperlink{arithm__logic_8h_afc3aa14ada3cf45838610628d873322c}{00119}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_afc3aa14ada3cf45838610628d873322c}{sbiw}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//\ Subtract\ immediate\ from\ word}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//\ Rd:Rd+1\ <-\/\ Rd:Rd+1\ -\/\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00124}00124\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00125}00125\ \ \ \ \ uint16\_t\ Rd\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ (core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ <<\ 8);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00126}00126\ \ \ \ \ uint16\_t\ result\ =\ Rd\ -\/\ K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00127}00127\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00128}00128\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d\ +\ 1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00130}00130\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00132}\mbox{\hyperlink{arithm__logic_8h_abec54cb51cf0049718ad804c52b5b352}{00132}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_abec54cb51cf0049718ad804c52b5b352}{and}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ Logical\ AND}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ Rr}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00137}00137\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00138}00138\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00139}00139\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00140}00140\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00141}00141\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00140}00140\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00142}00142\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00143}00143\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00144}00144\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00144}00144\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00145}00145\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00146}00146\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00147}00147\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00148}00148\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00149}\mbox{\hyperlink{arithm__logic_8h_a5c55fe52bf5050bd80a4d3994b7c54e0}{00149}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a5c55fe52bf5050bd80a4d3994b7c54e0}{andi}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00150}00150\ \ \ \ \ \textcolor{comment}{//\ Logical\ AND\ with\ immediate}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00152}00152\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00146}\mbox{\hyperlink{arithm__logic_8h_a5c55fe52bf5050bd80a4d3994b7c54e0}{00146}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a5c55fe52bf5050bd80a4d3994b7c54e0}{andi}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00147}00147\ \ \ \ \ \textcolor{comment}{//\ Logical\ AND\ with\ immediate}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00148}00148\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00149}00149\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00152}00152\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ K;}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00153}00153\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00154}00154\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00155}00155\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00156}00156\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00157}00157\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00160}00160\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00162}00162\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00163}00163\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00154}00154\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00155}00155\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00158}00158\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00160}\mbox{\hyperlink{arithm__logic_8h_a8a8c61708f5897bb840793e2b75068e5}{00160}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a8a8c61708f5897bb840793e2b75068e5}{or}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00161}00161\ \ \ \ \ \textcolor{comment}{//\ Logical\ OR}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00162}00162\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ Rr}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00164}00164\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00165}\mbox{\hyperlink{arithm__logic_8h_a8a8c61708f5897bb840793e2b75068e5}{00165}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a8a8c61708f5897bb840793e2b75068e5}{or}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00166}00166\ \ \ \ \ \textcolor{comment}{//\ Logical\ OR}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ Rr}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00169}00169\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00170}00170\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00171}00171\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00172}00172\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00173}00173\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00174}00174\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00175}00175\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00176}00176\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00177}00177\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00178}00178\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00179}00179\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00180}00180\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00181}\mbox{\hyperlink{arithm__logic_8h_a7157100057c09dbbcd3763a898d8caa9}{00181}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a7157100057c09dbbcd3763a898d8caa9}{ori}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00182}00182\ \ \ \ \ \textcolor{comment}{//\ Logical\ OR\ with\ immediate}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00183}00183\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00184}00184\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00185}00185\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00186}00186\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00165}00165\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00166}00166\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00168}00168\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00171}00171\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00172}00172\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00174}\mbox{\hyperlink{arithm__logic_8h_a7157100057c09dbbcd3763a898d8caa9}{00174}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a7157100057c09dbbcd3763a898d8caa9}{ori}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00175}00175\ \ \ \ \ \textcolor{comment}{//\ Logical\ OR\ with\ immediate}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00176}00176\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00177}00177\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00179}00179\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00180}00180\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00182}00182\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00183}00183\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00185}00185\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00186}00186\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00187}00187\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00188}00188\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00189}00189\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00190}00190\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00191}00191\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00193}00193\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00194}00194\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00195}00195\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00196}00196\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00197}\mbox{\hyperlink{arithm__logic_8h_a5ef1b5c13a7cbdb9087a990399f77912}{00197}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a5ef1b5c13a7cbdb9087a990399f77912}{eor}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00198}00198\ \ \ \ \ \textcolor{comment}{//\ Logical\ Exclusive\ OR}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00199}00199\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \string^\ Rr}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00200}00200\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00188}\mbox{\hyperlink{arithm__logic_8h_a5ef1b5c13a7cbdb9087a990399f77912}{00188}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a5ef1b5c13a7cbdb9087a990399f77912}{eor}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00189}00189\ \ \ \ \ \textcolor{comment}{//\ Logical\ Exclusive\ OR}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00190}00190\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \string^\ Rr}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00191}00191\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00193}00193\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00194}00194\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \string^\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00196}00196\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00197}00197\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00198}00198\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00199}00199\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00200}00200\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00201}00201\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00202}00202\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00203}00203\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00204}00204\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00205}00205\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \string^\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00202}\mbox{\hyperlink{arithm__logic_8h_aacf52a73b7ec8048e625df19a91834a8}{00202}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_aacf52a73b7ec8048e625df19a91834a8}{com}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00203}00203\ \ \ \ \ \textcolor{comment}{//\ Logical\ Complement}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00204}00204\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$FF\ -\/\ Rd}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00205}00205\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00206}00206\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00207}00207\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00209}00209\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00210}00210\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00211}00211\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00212}00212\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00213}\mbox{\hyperlink{arithm__logic_8h_aacf52a73b7ec8048e625df19a91834a8}{00213}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_aacf52a73b7ec8048e625df19a91834a8}{com}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00214}00214\ \ \ \ \ \textcolor{comment}{//\ Logical\ Complement}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00215}00215\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$FF\ -\/\ Rd}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00216}00216\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00217}00217\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00218}00218\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00219}00219\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00220}00220\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00221}00221\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ \string~core-\/>gp.R[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00222}00222\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00223}00223\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00224}00224\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00225}00225\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_aebcd4c16a776b76e8155f372fba821cd}{update\_sreg\_C}}(core,\ \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00226}00226\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00227}00227\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00228}00228\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00229}00229\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00230}\mbox{\hyperlink{arithm__logic_8h_ada2234f18c40e628c32cd49624363d26}{00230}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_ada2234f18c40e628c32cd49624363d26}{neg}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00231}00231\ \ \ \ \ \textcolor{comment}{//\ Two's\ Complement}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00232}00232\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$00\ -\/\ Rd}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00233}00233\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00234}00234\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00235}00235\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00207}00207\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00208}00208\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ \string~core-\/>gp.R[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00210}00210\ \ \ \ \ \textcolor{comment}{//\ Update\ SREG}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00211}00211\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_a80a6b63f52d2cae45fba39adf1820bb8}{update\_sreg\_logic}}(core,\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00212}00212\ \ \ \ \ \mbox{\hyperlink{sreg__utils_8h_aebcd4c16a776b76e8155f372fba821cd}{update\_sreg\_C}}(core,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00213}00213\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00214}00214\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00215}00215\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00217}\mbox{\hyperlink{arithm__logic_8h_ada2234f18c40e628c32cd49624363d26}{00217}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_ada2234f18c40e628c32cd49624363d26}{neg}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00218}00218\ \ \ \ \ \textcolor{comment}{//\ Two's\ Complement}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00219}00219\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$00\ -\/\ Rd}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00220}00220\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00222}00222\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00223}00223\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ -\/core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00224}00224\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00225}00225\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00227}\mbox{\hyperlink{arithm__logic_8h_a66e08d3dc14c4f3aafa0f57bd36fde57}{00227}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a66e08d3dc14c4f3aafa0f57bd36fde57}{sbr}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00228}00228\ \ \ \ \ \textcolor{comment}{//\ Set\ Bit\ in\ Register}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00229}00229\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ K}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00230}00230\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00232}00232\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00233}00233\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00234}00234\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00235}00235\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00236}00236\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00237}00237\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00238}00238\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ -\/core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00239}00239\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00237}\mbox{\hyperlink{arithm__logic_8h_a9b453d8c161cc0faf8272d722ee5539e}{00237}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a9b453d8c161cc0faf8272d722ee5539e}{cbr}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00238}00238\ \ \ \ \ \textcolor{comment}{//\ Clear\ Bit\ in\ Register}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00239}00239\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ (\$FF\ -\/\ K)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00240}00240\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00241}00241\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00242}\mbox{\hyperlink{arithm__logic_8h_a66e08d3dc14c4f3aafa0f57bd36fde57}{00242}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a66e08d3dc14c4f3aafa0f57bd36fde57}{sbr}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00243}00243\ \ \ \ \ \textcolor{comment}{//\ Set\ Bit\ in\ Register}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00244}00244\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ |\ K}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00245}00245\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00242}00242\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00243}00243\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ \string~K;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00244}00244\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00245}00245\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00246}00246\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00247}00247\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00248}00248\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00249}00249\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00250}00250\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ |\ K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00251}00251\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00252}00252\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00253}00253\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00254}\mbox{\hyperlink{arithm__logic_8h_a9b453d8c161cc0faf8272d722ee5539e}{00254}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a9b453d8c161cc0faf8272d722ee5539e}{cbr}}(uint8\_t\ d,\ uint8\_t\ K,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00255}00255\ \ \ \ \ \textcolor{comment}{//\ Clear\ Bit\ in\ Register}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00256}00256\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ (\$FF\ -\/\ K)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00257}00257\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00258}00258\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00259}00259\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00260}00260\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00261}00261\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00262}00262\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ \string~K;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00263}00263\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00264}00264\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00265}00265\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00266}\mbox{\hyperlink{arithm__logic_8h_a1adfbbce00925828d38879c08402b525}{00266}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1adfbbce00925828d38879c08402b525}{inc}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00267}00267\ \ \ \ \ \textcolor{comment}{//\ Increment}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00268}00268\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ +\ 1}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00269}00269\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00270}00270\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00271}00271\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00272}00272\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00273}00273\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00274}00274\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ 1;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00275}00275\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00276}00276\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00277}00277\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00278}\mbox{\hyperlink{arithm__logic_8h_a3f75c94e32e7f47a3ed9fd7517a21ced}{00278}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a3f75c94e32e7f47a3ed9fd7517a21ced}{dec}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00279}00279\ \ \ \ \ \textcolor{comment}{//\ Decrement}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00280}00280\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ 1}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00281}00281\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00282}00282\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00283}00283\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00284}00284\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00285}00285\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00286}00286\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00287}00287\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00288}00288\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00289}00289\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00290}\mbox{\hyperlink{arithm__logic_8h_a1769514b3471ca58b2bdbc47397bcd6f}{00290}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1769514b3471ca58b2bdbc47397bcd6f}{tst}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00291}00291\ \ \ \ \ \textcolor{comment}{//\ Test\ for\ Zero\ or\ Minus}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00292}00292\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ Rd}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00293}00293\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00294}00294\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00295}00295\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00247}\mbox{\hyperlink{arithm__logic_8h_a1adfbbce00925828d38879c08402b525}{00247}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1adfbbce00925828d38879c08402b525}{inc}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00248}00248\ \ \ \ \ \textcolor{comment}{//\ Increment}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00249}00249\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ +\ 1}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00250}00250\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00252}00252\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00253}00253\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00254}00254\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00255}00255\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00257}\mbox{\hyperlink{arithm__logic_8h_a3f75c94e32e7f47a3ed9fd7517a21ced}{00257}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a3f75c94e32e7f47a3ed9fd7517a21ced}{dec}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00258}00258\ \ \ \ \ \textcolor{comment}{//\ Decrement}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00259}00259\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ -\/\ 1}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00260}00260\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00262}00262\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00263}00263\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00264}00264\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00265}00265\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00267}\mbox{\hyperlink{arithm__logic_8h_a1769514b3471ca58b2bdbc47397bcd6f}{00267}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a1769514b3471ca58b2bdbc47397bcd6f}{tst}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00268}00268\ \ \ \ \ \textcolor{comment}{//\ Test\ for\ Zero\ or\ Minus}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00269}00269\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ Rd\ \&\ Rd}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00270}00270\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00272}00272\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00273}00273\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00274}00274\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00275}00275\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00277}\mbox{\hyperlink{arithm__logic_8h_a6c10b84a5af211573842267374619abd}{00277}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a6c10b84a5af211573842267374619abd}{clr}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00278}00278\ \ \ \ \ \textcolor{comment}{//\ Clear\ Register}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00279}00279\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ 0}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00280}00280\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00282}00282\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00283}00283\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00284}00284\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00285}00285\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00287}\mbox{\hyperlink{arithm__logic_8h_a27a2f1bf8ea3c58dfe07bd95f333bca9}{00287}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a27a2f1bf8ea3c58dfe07bd95f333bca9}{ser}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00288}00288\ \ \ \ \ \textcolor{comment}{//\ Set\ Register}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00289}00289\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$FF}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00290}00290\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00292}00292\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00293}00293\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00294}00294\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00295}00295\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00296}00296\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00297}00297\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00298}00298\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ \&\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00299}00299\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00300}00300\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00297}\mbox{\hyperlink{arithm__logic_8h_a06c61e59a28ba379749902824f2873a3}{00297}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a06c61e59a28ba379749902824f2873a3}{mul}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00298}00298\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Unsigned}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00299}00299\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (UU)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00300}00300\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00301}00301\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00302}\mbox{\hyperlink{arithm__logic_8h_a6c10b84a5af211573842267374619abd}{00302}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a6c10b84a5af211573842267374619abd}{clr}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00303}00303\ \ \ \ \ \textcolor{comment}{//\ Clear\ Register}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00304}00304\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ 0}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00305}00305\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00306}00306\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00307}00307\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00302}00302\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00303}00303\ \ \ \ \ uint16\_t\ result\ =\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00304}00304\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00305}00305\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00306}00306\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00307}00307\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00308}00308\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00309}00309\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00310}00310\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00311}00311\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00312}00312\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00309}\mbox{\hyperlink{arithm__logic_8h_a426989a83a1317d2d1c56b3f688cc5bd}{00309}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a426989a83a1317d2d1c56b3f688cc5bd}{muls}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00310}00310\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Signed}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00311}00311\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SS)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00312}00312\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00313}00313\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00314}\mbox{\hyperlink{arithm__logic_8h_a27a2f1bf8ea3c58dfe07bd95f333bca9}{00314}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a27a2f1bf8ea3c58dfe07bd95f333bca9}{ser}}(uint8\_t\ d,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00315}00315\ \ \ \ \ \textcolor{comment}{//\ Set\ Register}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00316}00316\ \ \ \ \ \textcolor{comment}{//\ Rd\ <-\/\ \$FF}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00317}00317\ \ \ \ \ \textcolor{comment}{//\ 1\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00318}00318\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00319}00319\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00314}00314\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00315}00315\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00316}00316\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00317}00317\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00318}00318\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00319}00319\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00320}00320\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00321}00321\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00322}00322\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ =\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00323}00323\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00324}00324\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00321}\mbox{\hyperlink{arithm__logic_8h_a85433901dd8acfc20ced9093b716e674}{00321}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a85433901dd8acfc20ced9093b716e674}{mulsu}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00322}00322\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Signed\ with\ Unsigned}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00323}00323\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SU)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00324}00324\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00325}00325\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00326}\mbox{\hyperlink{arithm__logic_8h_a06c61e59a28ba379749902824f2873a3}{00326}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a06c61e59a28ba379749902824f2873a3}{mul}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00327}00327\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Unsigned}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00328}00328\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (UU)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00329}00329\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00330}00330\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00331}00331\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00326}00326\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00327}00327\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00328}00328\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00329}00329\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00330}00330\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00331}00331\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00332}00332\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00333}00333\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00334}00334\ \ \ \ \ uint16\_t\ result\ =\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00335}00335\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00336}00336\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00337}00337\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00338}00338\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00339}00339\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00340}\mbox{\hyperlink{arithm__logic_8h_a426989a83a1317d2d1c56b3f688cc5bd}{00340}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a426989a83a1317d2d1c56b3f688cc5bd}{muls}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00341}00341\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Signed}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00342}00342\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SS)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00343}00343\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00333}\mbox{\hyperlink{arithm__logic_8h_a28759ca2fa3120b0a8cc4c414c75851c}{00333}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a28759ca2fa3120b0a8cc4c414c75851c}{fmul}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00334}00334\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Unsigned}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00335}00335\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (UU)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00336}00336\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00338}00338\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00339}00339\ \ \ \ \ uint16\_t\ result\ =\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00340}00340\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00341}00341\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00342}00342\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00343}00343\ \}}
 \DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00344}00344\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00345}00345\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00346}00346\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00347}00347\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00348}00348\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00349}00349\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00350}00350\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00351}00351\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00352}00352\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00353}00353\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00354}\mbox{\hyperlink{arithm__logic_8h_a85433901dd8acfc20ced9093b716e674}{00354}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a85433901dd8acfc20ced9093b716e674}{mulsu}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00355}00355\ \ \ \ \ \textcolor{comment}{//\ Multiply\ Signed\ with\ Unsigned}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00356}00356\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SU)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00357}00357\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00358}00358\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00359}00359\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00360}00360\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00361}00361\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00362}00362\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00363}00363\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00364}00364\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00365}00365\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00366}00366\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00367}00367\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00368}\mbox{\hyperlink{arithm__logic_8h_a28759ca2fa3120b0a8cc4c414c75851c}{00368}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a28759ca2fa3120b0a8cc4c414c75851c}{fmul}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00369}00369\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Unsigned}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00370}00370\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (UU)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00371}00371\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00372}00372\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00373}00373\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00374}00374\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00375}00375\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00376}00376\ \ \ \ \ uint16\_t\ result\ =\ (uint16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00377}00377\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00378}00378\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00379}00379\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00380}00380\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00381}00381\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00382}\mbox{\hyperlink{arithm__logic_8h_abc745a0f8071087a90afe26c16274704}{00382}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_abc745a0f8071087a90afe26c16274704}{fmuls}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00383}00383\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Signed}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00384}00384\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SS)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00385}00385\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00386}00386\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00387}00387\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00388}00388\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00389}00389\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00390}00390\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (int16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00391}00391\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00392}00392\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00393}00393\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00394}00394\ \}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00395}00395\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00396}\mbox{\hyperlink{arithm__logic_8h_a857ef805c6d57f318863968b07a0ce91}{00396}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a857ef805c6d57f318863968b07a0ce91}{fmulsu}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00397}00397\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Signed\ with\ Unsigned}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00398}00398\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SU)}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00399}00399\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00400}00400\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00401}00401\ \ \ \ \ uint8\_t\ R\_tmp\ =\ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d];}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00402}00402\ }
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00403}00403\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00404}00404\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00405}00405\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00406}00406\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00407}00407\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
-\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00408}00408\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00345}\mbox{\hyperlink{arithm__logic_8h_abc745a0f8071087a90afe26c16274704}{00345}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_abc745a0f8071087a90afe26c16274704}{fmuls}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00346}00346\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Signed}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00347}00347\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SS)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00348}00348\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00350}00350\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00351}00351\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (int16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00352}00352\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00353}00353\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00354}00354\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00355}00355\ \}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00357}\mbox{\hyperlink{arithm__logic_8h_a857ef805c6d57f318863968b07a0ce91}{00357}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arithm__logic_8c_a857ef805c6d57f318863968b07a0ce91}{fmulsu}}(uint8\_t\ d,\ uint8\_t\ r,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structCORE}{CORE}}\ *core)\ \{}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00358}00358\ \ \ \ \ \textcolor{comment}{//\ Fractional\ Multiply\ Signed\ with\ Unsigned}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00359}00359\ \ \ \ \ \textcolor{comment}{//\ R1:R0\ <-\/\ Rd\ *\ Rr\ (SU)}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00360}00360\ \ \ \ \ \textcolor{comment}{//\ 2\ cycle}}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00361}00361\ }
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00362}00362\ \ \ \ \ \textcolor{comment}{//\ Execute\ instruction\ }}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00363}00363\ \ \ \ \ int16\_t\ result\ =\ (int16\_t)core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[d]\ *\ (uint16\_t)(core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[r]\ <<\ 1);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00364}00364\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[0]\ =\ result\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00365}00365\ \ \ \ \ core-\/>\mbox{\hyperlink{structCORE_a1f60156beb341fdc51957d48a9e42491}{gp}}.\mbox{\hyperlink{unionGP_ad8dd01f0ca164e6e6528a34a820a6e5c}{R}}[1]\ =\ (result\ >>\ 8)\ \&\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00366}00366\ \ \ \ \ \mbox{\hyperlink{core_8h_a1fb48f2baa4165f571b427ae71914986}{inc\_pc}}(core);}
+\DoxyCodeLine{\Hypertarget{arithm__logic_8c_source_l00367}00367\ \}}
 
 \end{DoxyCode}

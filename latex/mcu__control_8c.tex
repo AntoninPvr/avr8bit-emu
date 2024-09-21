@@ -9,11 +9,11 @@ Include dependency graph for mcu\+\_\+control.\+c\+:
 void \mbox{\hyperlink{mcu__control_8c_a32fc67a9f7544ff0443bd19dbd977237}{break\+\_\+point}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
 \begin{DoxyCompactList}\small\item\em Breakpoint. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{mcu__control_8c_aee97c453ba82b284a0e2d4ba8d9dbff1}{nop}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Executes a no-\/operation instruction. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{mcu__control_8c_a35d8d4e13032edbcd79da54500c97c1a}{sleep}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\item 
+\begin{DoxyCompactList}\small\item\em Puts the MCU into sleep mode. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{mcu__control_8c_a86e3f7d6a40ddef673121328941fda02}{wdr}} (struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}core)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resets the watchdog timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -26,6 +26,8 @@ void \mbox{\hyperlink{mcu__control_8c_a86e3f7d6a40ddef673121328941fda02}{wdr}} (
 
 
 Breakpoint. 
+
+Triggers a breakpoint in the MCU emulator.
 
 
 \begin{DoxyParams}{Parameters}
@@ -53,6 +55,19 @@ Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00008}{8}} of file \
 
 
 
+Executes a no-\/operation instruction. 
+
+This function simulates the execution of a NOP (no operation) instruction, which does nothing and simply advances the program counter.
+
+Currently, this function does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure representing the MCU state. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00011}{11}} of file \mbox{\hyperlink{mcu__control_8c_source}{mcu\+\_\+control.\+c}}.
 
 
@@ -71,6 +86,19 @@ Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00011}{11}} of file 
 
 
 
+Puts the MCU into sleep mode. 
+
+This function simulates putting the MCU into a low-\/power sleep mode, reducing power consumption until an interrupt occurs.
+
+Currently, this function does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure representing the MCU state. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00016}{16}} of file \mbox{\hyperlink{mcu__control_8c_source}{mcu\+\_\+control.\+c}}.
 
 
@@ -87,6 +115,19 @@ Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00016}{16}} of file 
 \doxysubsubsection{\texorpdfstring{wdr()}{wdr()}}
 {\footnotesize\ttfamily void wdr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structCORE}{CORE}} \texorpdfstring{$\ast$}{*}}]{core }\end{DoxyParamCaption})}
 
+
+
+Resets the watchdog timer. 
+
+This function simulates resetting the watchdog timer, preventing the MCU from resetting due to a watchdog timeout.
+
+Currently, this function does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & Pointer to the \doxylink{structCORE}{CORE} structure representing the MCU state. \\
+\hline
+\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{mcu__control_8c_source_l00021}{21}} of file \mbox{\hyperlink{mcu__control_8c_source}{mcu\+\_\+control.\+c}}.
