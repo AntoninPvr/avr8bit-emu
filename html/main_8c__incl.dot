@@ -16,7 +16,7 @@ digraph "src/main.c"
   Node5 -> Node2 [id="edge5_Node000005_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node5 -> Node3 [id="edge6_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node6 [id="Node000006",label="arithm_logic.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$arithm__logic_8h.html",tooltip=" "];
+  Node6 [id="Node000006",label="arithm_logic.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$arithm__logic_8h.html",tooltip="Arithmetic and logic operations."];
   Node6 -> Node2 [id="edge8_Node000006_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node6 -> Node3 [id="edge9_Node000006_Node000003",color="steelblue1",style="solid",tooltip=" "];
   Node6 -> Node5 [id="edge10_Node000006_Node000005",color="steelblue1",style="solid",tooltip=" "];

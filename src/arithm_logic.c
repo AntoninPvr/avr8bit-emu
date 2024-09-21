@@ -1,6 +1,10 @@
 #include "arithm_logic.h"
 
 void add(uint8_t d, uint8_t r, struct CORE *core) {
+    // Add without carry
+    // Rd <- Rd + Rr
+    // 1 cycle
+    
 	uint8_t R_tmp = core->gp.R[d];
 
     // Execute instruction
